@@ -29,7 +29,8 @@ header{
     display: flex;
     /*capire cosa fa il display flex*/
     justify-content: space-between;
-    /*space-between fa sì che il primo e l'ultimo vengano spinti a destra e a sinistra del contenitore, mentre l'elemento/i (?) nel mezzo occuperà(/nno) una posizione intermedia*/
+    /*space-between fa sì che il primo e l'ultimo vengano spinti a destra e a sinistra del contenitore,
+    mentre l'elemento/i (?) nel mezzo occuperà(/nno) una posizione intermedia*/
 align-items: center; /*non ho capito cosa fa*/
 padding: 10px 10%; /*scritto così significa che c'è un margine di 30px dall'alto e dal basso, mentre del 10% (dello schermo?) dai lati*/
 border-bottom: 10px solid #3b343f;
@@ -40,3 +41,14 @@ border-bottom: 10px solid #3b343f;
     height: 8%;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /*è come scrivere 1fr 1fr 1fr 1fr 1fr 1fr*/
+      /*mi sembra che il tipo del tutorial parli di come si può fare anche con il flexbox,
+     forse è meglio saperlo anche se preferisco grid come impostazione*/
+    grid-auto-rows: 41pt;
+    /*in questo modo se abbiamo una pagina che scorre come la nostra, e non sappiamo quante righe saranno,
+    con questo comando ti fa automaticamente tante righe quante sono necessarie per riempire lo spazio che abbiamo usato
+    (poi se vogliamo modificare l'altezza di una singola riga possiamo farlo lo stesso)*/
+
+}
