@@ -1,0 +1,42 @@
+/*con questo "carico"? i font da subito e poi posso usarli dopo nel css*/
+@font-face {
+    font-family: 'eckma';
+    src: url(fonts/eckma.ttf);
+}
+
+
+/*questo non so cosa sia, lo sto dicendo solo perchè il tutorial mi dice di farlo*/
+*{
+box-sizing: border-box;
+margin:0;
+}
+
+body {
+  background: #fcf8f2; 
+}
+
+p {
+    font-family: 'eckma', sans-serif;
+    font-size: 75pt;
+    color: #3b343f; /*trovare un modo per abbinare questo colore letteralmente a ogni elemento che vogliamo sia nero*/
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    /*capire cosa fa il display flex*/
+    justify-content: space-between;
+    /*space-between fa sì che il primo e l'ultimo vengano spinti a destra e a sinistra del contenitore, mentre l'elemento/i (?) nel mezzo occuperà(/nno) una posizione intermedia*/
+align-items: center; /*non ho capito cosa fa*/
+padding: 10px 10%; /*scritto così significa che c'è un margine di 30px dall'alto e dal basso, mentre del 10% (dello schermo?) dai lati*/
+border-bottom: 10px solid #3b343f;
+}
+
+.logo{
+    width: 8%;
+    height: 8%;
+}
+
