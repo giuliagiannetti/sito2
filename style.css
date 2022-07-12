@@ -1,54 +1,61 @@
 /*con questo "carico"? i font da subito e poi posso usarli dopo nel css*/
 @font-face {
-    font-family: 'eckma';
-    src: url(fonts/eckma.ttf);
+  font-family: "eckma";
+  src: url(fonts/eckma.ttf);
 }
 
-
 /*questo non so cosa sia, lo sto dicendo solo perchè il tutorial mi dice di farlo*/
-*{
-box-sizing: border-box;
-margin:0;
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
 body {
-  background: #fcf8f2; 
+  background: #fcf8f2;
 }
 
 p {
-    font-family: 'eckma', sans-serif;
-    font-size: 40pt;
-    color: #3b343f; /*trovare un modo per abbinare questo colore letteralmente a ogni elemento che vogliamo sia nero*/
+  font-family: "eckma", sans-serif;
+  font-size: 40pt;
+  color: #3b343f; /*trovare un modo per abbinare questo colore letteralmente a ogni elemento che vogliamo sia nero*/
 }
 
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    /*capire cosa fa il display flex*/
-    justify-content: space-between;
-    /*space-between fa sì che il primo e l'ultimo vengano spinti a destra e a sinistra del contenitore,
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  /*capire cosa fa il display flex*/
+  justify-content: space-between;
+  /*space-between fa sì che il primo e l'ultimo vengano spinti a destra e a sinistra del contenitore,
     mentre l'elemento/i (?) nel mezzo occuperà(/nno) una posizione intermedia*/
-align-items: center; /*non ho capito cosa fa*/
-padding: 10px 10%; /*scritto così significa che c'è un margine di 30px dall'alto e dal basso, mentre del 10% (dello schermo?) dai lati*/
-border-bottom: 10px solid #3b343f;
+  align-items: center; /*non ho capito cosa fa*/
+  padding: 10px 10%; /*scritto così significa che c'è un margine di 30px dall'alto e dal basso, mentre del 10% (dello schermo?) dai lati*/
+  border-bottom: 10px solid #3b343f;
 }
 
-.logo{
-    width: 8%;
-    height: 8%;
+.logo {
+  width: 8%;
+  height: 8%;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); /*è come scrivere 1fr 1fr 1fr 1fr 1fr 1fr*/
-      /*mi sembra che il tipo del tutorial parli di come si può fare anche con il flexbox,
+  transform: translate(0, 65px); /*Perchè ho dovuto mettere la metà dei pixel dell'header?*/
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  /*repeat(6, 1fr);*/ /*è come scrivere 1fr 1fr 1fr 1fr 1fr 1fr*/
+  /*mi sembra che il tipo del tutorial parli di come si può fare anche con il flexbox,
      forse è meglio saperlo anche se preferisco grid come impostazione*/
-    grid-auto-rows: 41pt;
-    /*in questo modo se abbiamo una pagina che scorre come la nostra, e non sappiamo quante righe saranno,
+  grid-auto-rows: 41pt;
+  /*in questo modo se abbiamo una pagina che scorre come la nostra, e non sappiamo quante righe saranno,
     con questo comando ti fa automaticamente tante righe quante sono necessarie per riempire lo spazio che abbiamo usato
     (poi se vogliamo modificare l'altezza di una singola riga possiamo farlo lo stesso)*/
-
+  /*grid-column-gap: 91px;
+grid-row-gap: 41pt;*/
 }
+
+/*#grid {
+    position: fixed;
+    top: 130px;
+}*/
