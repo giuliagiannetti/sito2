@@ -4,6 +4,11 @@
   src: url(fonts/eckma.ttf);
 }
 
+@font-face {
+  font-family: "univers";
+  src: url(fonts/Janson/Janson/JansonTextLTStd-Roman\ from\ download-free-fonts.com.otf);
+}
+
 /*questo non so cosa sia, lo sto dicendo solo perchè il tutorial mi dice di farlo*/
 * {
   box-sizing: border-box;
@@ -15,8 +20,6 @@ body {
 }
 
 p {
-  font-family: "eckma", sans-serif;
-  font-size: 40pt;
   color: #3b343f; /*trovare un modo per abbinare questo colore letteralmente a ogni elemento che vogliamo sia nero*/
 }
 
@@ -45,6 +48,8 @@ header {
 }
 
 .nomesito {
+  font-family: "eckma", sans-serif;
+  font-size: 40pt;
   margin-right: auto; /*non so perchè ma lo mette a sinistra*/
 }
 
@@ -80,9 +85,14 @@ header {
 .cornice {
    border: 3px solid black;
   margin: 40px 20px;
+  padding-top: 100px;
   height: 500px;
 }
 
 .titolifont {
-  font-family: 
+  font-family: "univers"; 
+  font-size: 30pt;
+  text-align: left;
+  margin-left: 40px;
+  margin-top: 30px;
 }
