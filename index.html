@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
     <title>FontCow</title>
   </head>
   <body>
@@ -14,29 +14,49 @@
      <img width="100px" height="100px" class="menu" src="vectors/memuu.svg"></svg>
     </header>
     <div class="grid-container">
-      <div class="font-selection">
-        <div class="cornice">
-          <p class="titolifont">font 1</p>
-          <p class="titolifont">font 2</p>
-          <p class="titolifont">font 3</p>
-          <p class="titolifont">font 4</p>
-          <p class="titolifont">font 5</p>
-          <p class="titolifont">font 6</p>
-          <p class="titolifont">font 7</p>
-          <p class="titolifont">font 8</p>
-          <p class="titolifont">font 9</p>
+      <div class="sidenav">
+        <div class="sidenav-cornice">
+          <a href="#univers" class="sidenav-nomi" id="font1">Univers</a>
+          <a href="#helvetica" class="sidenav-nomi">Helvetica</a>
+          <a class="sidenav-nomi">Garamond</a>
+          <a class="sidenav-nomi">Bodoni</a>
+          <a class="sidenav-nomi">Franklin Gothic</a>
+          <p class="sidenav-nomi">font 6</p>
+          <p class="sidenav-nomi">font 7</p>
+          <p class="sidenav-nomi">font 8</p>
+          <p class="sidenav-nomi">font 9</p>
         </div>
       </div>
-      <!--<div class="grid-container grid-item-2">b</div>
-      <div class="grid-container grid-item-3">c</div>
-      <div class="grid-container grid-item-4">d</div> 
-      <div class="grid-container grid-item-5">e</div>
-      <div class="grid-container grid-item-6">f</div> -->
-      <!--perchè al momento non vedo le griglie se nel tutorial si vedono subito? :(-->
-      <!--ispeziona mi dice che gli elementi della griglia sono tutti in alto a sx e hanno altezza 0-->
-      <!--forse è perchè la griglia è posizionata sopra all'header (non capisco perchè essendo sotto nel codice), 
-        quindi se scrivo la misura in fr mi conta le frazioni dello spazio tra il margine dello schermo e la navbar (che è uguale a 0px, 
-        per questo mi escono tutte con altezza 0). Se infatti scrivo la misura delle righe in pixel (es 200px) riesco a vederle-->
+        <div class="storiefont">
+          <p class="stofont-titoli" id="univers" class="univers"> Univers</p> <!--ho messo l'id per il collegamento e la classe per il cambio di stile,
+          ho sempre il problema che quando clicchi sull'ancora ti porta a metà testo e fa schifo-->
+          <p class="stofont-testi" class="univers"> Univers è un carattere senza grazie di tipo realist creato da Adrian Frutiger, i cui studi iniziarono nel 1954 e finirono nel 1957. Sia Univers che Helvetica, con cui a volte il primo viene confuso, prendono ispirazione dal carattere del 1896 Akzidenz Grotesk che ha avuto molta importanza nello stile svizzero del design grafico.
+
+            I differenti pesi e variazioni tra i caratteri che compongono la famiglia sono distinti tramite numeri invece che tramite nomi, un sistema che è stato usato da Frutiger anche per altri caratteri. Infatti Frutiger ha immaginato una grande famiglia di caratteri con diverse larghezze e pesi che però mantiene un idioma di design unificato.
+            
+            La famiglia Univers comprende 14 larghezze più 14 corrispondenti pesi Oblique oltre a 16 varianti con il charset dell'Europa centrale e del cirillico.
+            
+            Nel 1997 Frutiger ha rielaborato l'Univers in collaborazione con Linotype, e ha creato il Linotype Univers, che comprende 63 pesi. Il nuovo Univers comprende molti pesi "estremi" come Ultra Light o Extended Heavy e sono stati aggiunti anche alcuni caratteri monospazio. Il sistema numerico di classificazione è stato portato a tre cifre per comprendere il grande numero di variazioni comprese nella famiglia.
+            
+            Univers raggiunse una grande popolarità tra il 1960 e il 1970. Viene utilizzato in una versione modificata dalla Swiss International Air Lines (precedentemente la Swissair usava il Futura), dalla Deutsche Bank e inoltre viene usato per la segnaletica un po' dappertutto nel mondo. General Electric l'ha usato dal 1986 al 2004 prima di passare al GE Inspira[1]. Apple Inc. ha usato questo carattere nella versione condensed oblique per i tasti di molte tastiere. È conosciuto per le sue linee pulite e per la leggibilità a grande distanza. Il Montreal Metro, la San Francisco BART (Bay Area Rapid Transit)[2], l'Aeroporto di Francoforte sul Meno e il sistema di trasporti di Walt Disney World fanno largo uso di questo carattere. Alcuni dei London Boroughs usano l'Univers Bold Condensed per i segnali stradali, La Royal Air Force lo adotta dal 2006 per tutto il materiale di merchandising e per il suo logo. Così anche l'ONG Emergency.
+            
+            L'Ordnance Survey utilizza Univers per le proprie mappe (aggiungendo dei tagli sulle l e t minuscole e altre piccole cambiamenti per aiutare a distinguere le lettere dai dettagli della mappa) sul quale detiene tutti i diritti. Nel 2006, l'Office of Fair Trading ha adottato Univers nella sua veste tipografica aziendale alla dimensione 12 punti per permettere alle persone con problemi di vista di leggere facilmente le proprie pubblicazioni. Anche Rand McNally ha usato Univers sulle proprie mappe e atlanti dagli anni '70 al 2004 quando è passata a Frutiger.
+            
+            Univers è contenuto nella stampante HP LaserJet 1100. Installando una LaserJet 1100 su un sistema Windows vengono aggiunti molti nuovi font che presentano l'icona di una stampante accanto al loro nome. L'icona indica che il font è un printer font (che verrà processato dalla stampante) e non un font di sistema (processato e rasterizzato dal sistema, come ad esempio un carattere TrueType o OpenType).</p>
+          <p class="stofont-titoli">Helvetica</p>
+          <p class="stofont-titoli">Garamond</p>
+          <p class="stofont-titoli">Bodoni</p>
+          <p class="stofont-titoli">Franklin gothic</p>
+          <p class="stofont-titoli"></p>
+          <p class="stofont-titoli"></p>
+          <p class="stofont-titoli"></p>
+          <p class="stofont-titoli"></p>
+          <p class="stofont-titoli"></p>
+          <p class="stofont-titoli"></p>
+          <p class="stofont-titoli"></p>
+          <p class="stofont-titoli"></p>
+          <p class="stofont-titoli"></p>
+        </div>
     </div>
   </body>
 </html>
