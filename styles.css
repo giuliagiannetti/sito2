@@ -1,0 +1,161 @@
+/*con questo "carico"? i font da subito e poi posso usarli dopo nel css*/
+@font-face {
+    font-family: "eckma";
+    src: url(fonts/eckma.ttf);
+  }
+  
+  @font-face {
+    font-family: "janson";
+    src: url(fonts/Janson/Janson/JansonTextLTStd-Roman\ from\ download-free-fonts.com.otf);
+  }
+  
+  @font-face {
+    font-family: "univers";
+    src: url(fonts/univers/univers/UniversRegular.ttf);
+  }
+  
+  /*questo non so cosa sia, lo sto dicendo solo perchè il tutorial mi dice di farlo*/
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+
+  /*definisco in generale il colore dello sfondo di tutti gli elementi del body e il colore di tutti i testi*/
+  body {
+    background: #fcf8f2;
+  }
+  
+  p {
+    color: #3b343f; /*trovare un modo per abbinare questo colore letteralmente a ogni elemento che vogliamo sia nero*/
+  }
+  
+  a {
+    display: block; /*trasforma l'elemento in block perchè se no le parole si posizionano una accanto all'altra*/
+    text-decoration: none;
+    color: #3b343f;
+  }
+
+  /*inizio stile della navbar*/
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    background-color:#fcf8f2;
+    /*capire cosa fa il display flex*/
+    /*justify-content: space-between;
+     fa sì che il primo e l'ultimo vengano spinti a destra e a sinistra del contenitore,
+      mentre l'elemento/i (?) nel mezzo occuperà(/nno) una posizione intermedia. Non ci serve in realtà lol*/
+    justify-content: end; /*ti allinea tutto a destra*/
+    align-items: center; /*non ho capito cosa fa*/
+    padding: 10px 10%; /*scritto così significa che c'è un margine di 30px dall'alto e dal basso, mentre del 10% (dello schermo?) dai lati*/
+    border-bottom: 3pt solid #3b343f; /*!!! se cambi lo spessore del bordo poi devi cambiare anche la traslazione del grid container*/
+  }
+  
+  .logo {
+    width: 8%;
+    height: 8%;
+    margin-right: 40px; /*ho distanziato la mucca dal menu*/
+  }
+  
+  .nomesito {
+    font-family: "eckma", sans-serif;
+    font-size: 40pt;
+    margin-right: auto; /*non so perchè ma lo mette a sinistra*/
+  }
+  
+  .menu{
+    width: 80px;
+    height: 80px;
+  }
+/*fine stile della navbar*/
+
+
+/*inizio modifica della sidenav*/
+.sidenav {
+    height: 100%;
+    width: 33.33%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fcf8f2;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .sidenav a {
+    font-family: "janson"; 
+    font-size: 30pt;
+    text-align: left;
+    margin-left: 40px;
+    margin-top: 30px;
+  }
+  
+  .sidenav a:hover {
+    color: black;
+  }
+  
+  .sidenav-cornice {
+     border: 3pt solid #3b343f;;
+     margin: 144px 20px 40px 20px;
+    padding-top: 100px; /*l'altezza della navbar (104px) più altri 100px*/
+    height: 500px;
+    overflow: scroll;
+  }
+  
+  .sidenav-nomi {
+    font-family: "janson"; 
+    font-size: 30pt;
+    text-align: left;
+    margin-left: 40px;
+    margin-top: 30px;
+  }
+ 
+  /*inizio scrollbar*/
+  ::-webkit-scrollbar {
+  width: 1.25em;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #fcf8f2;
+    margin-block: .5rem;
+    }
+  
+    ::-webkit-scrollbar-thumb {
+      background-color:#3b343f;
+      border: .25em solid #fcf8f2;
+      border-radius: 100vw;
+      }
+  
+      ::-webkit-scrollbar-thumb:hover {
+        background-color:#000000;
+        }
+  /*fine scrollbar*/
+  
+  /*inizio modifica della parte principale (storie dei font)*/
+  .storiefont {
+    margin-left: 33.33%; /* traslo a destra della stessa larghezza della sidebar, così appare accanto */
+    margin-top: 130px;
+    padding: 0px 40pt;
+  }
+  .stofont-titoli {
+    font-size: 89pt;
+  }
+  
+  .univers {
+    font-family: "univers";
+  }
+  
+  .stofont-testi {
+    font-size: 20pt;
+  }
+
+ /*per un responsive che non ci serve?*/ 
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
