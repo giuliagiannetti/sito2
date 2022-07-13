@@ -149,6 +149,10 @@ header {
   font-size: 20pt;
 }
 
+.bodonimargin, .frankmargin, .helvmargin, .garamargin, .univmargin {
+  margin-bottom: 60pt;
+}
+
 #univers {
   font-family: "univers", sans-serif;
 }
@@ -175,6 +179,15 @@ font-weight: 400;
 font-style: normal;
 }
 
+.cerchio {
+  width: 350px;
+  height: 350px;
+  border: 3px solid #3b343f;
+  border-radius: 50%;
+  background-color: transparent;
+  float: right;
+}
+
 /*per un responsive che non ci serve?*/
 @media screen and (max-height: 450px) {
   .sidenav {
@@ -185,6 +198,3 @@ font-style: normal;
   }
 }
 
-.bodonimargin, .frankmargin, .helvmargin, .garamargin, .univmargin {
-  margin-bottom: 60pt;
-}
