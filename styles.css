@@ -50,7 +50,7 @@ header {
       mentre l'elemento/i (?) nel mezzo occuperà(/nno) una posizione intermedia. Non ci serve in realtà lol*/
   justify-content: end; /*ti allinea tutto a destra*/
   align-items: center; /*non ho capito cosa fa*/
-  padding: 10px 5%; /*scritto così significa che c'è un margine di 30px dall'alto e dal basso, mentre del 10% (dello schermo?) dai lati*/
+  padding: 10px 5%; /*scritto così significa che c'è un margine di 30px dall'alto e dal basso, mentre dell'8% (dello schermo?) dai lati*/
   border-bottom: 3pt solid #3b343f; /*!!! se cambi lo spessore del bordo poi devi cambiare anche la traslazione del grid container*/
 }
 
