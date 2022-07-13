@@ -50,7 +50,7 @@ header {
       mentre l'elemento/i (?) nel mezzo occuperà(/nno) una posizione intermedia. Non ci serve in realtà lol*/
   justify-content: end; /*ti allinea tutto a destra*/
   align-items: center; /*non ho capito cosa fa*/
-  padding: 10px 10%; /*scritto così significa che c'è un margine di 30px dall'alto e dal basso, mentre del 10% (dello schermo?) dai lati*/
+  padding: 10px 5%; /*scritto così significa che c'è un margine di 30px dall'alto e dal basso, mentre del 10% (dello schermo?) dai lati*/
   border-bottom: 3pt solid #3b343f; /*!!! se cambi lo spessore del bordo poi devi cambiare anche la traslazione del grid container*/
 }
 
@@ -83,6 +83,7 @@ header {
   background-color: #fcf8f2;
   overflow-x: hidden;
   padding-top: 20px;
+  padding-left: 5%;
 }
 
 .sidenav a {
@@ -99,7 +100,7 @@ header {
 
 .sidenav-cornice {
   border: 3pt solid #3b343f;
-  margin: 144px 20px 40px 20px;
+  margin: 144px 20px 40px 0px;
   padding-top: 100px; /*l'altezza della navbar (104px) più altri 100px*/
   height: 500px;
   overflow: scroll;
@@ -138,7 +139,7 @@ header {
 .storiefont {
   margin-left: 33.33%; /* traslo a destra della stessa larghezza della sidebar, così appare accanto */
   margin-top: 130px;
-  padding: 0px 40pt;
+  padding: 0px 5% 0px 40pt;
 }
 .stofont-titoli {
   font-size: 89pt;
@@ -182,4 +183,8 @@ font-style: normal;
   .sidenav a {
     font-size: 18px;
   }
+}
+
+.bodonimargin, .frankmargin, .helvmargin, .garamargin, .univmargin {
+  margin-bottom: 60pt;
 }
