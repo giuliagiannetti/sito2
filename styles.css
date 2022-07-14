@@ -81,7 +81,7 @@ header {
   top: 0;
   left: 0;
   background-color: #fcf8f2;
-  overflow-x: hidden;
+  overflow: hidden;
   padding-top: 20px;
   padding-left: 5%;
 }
