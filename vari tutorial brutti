@@ -51,8 +51,8 @@ per mettere cookie al cambio di stile (minuto 1.20.00 circa)
             cookie[key,trim()] = value;
         })
         return cookie[cookieName];
-     }
-      (qui magagna dice proprio prendetela così com'è e non chiedetevi perchè)
+     }  (qui magagna dice proprio prendetela così com'è e non chiedetevi perchè)
+      
 
       
      function ChangeColor () {

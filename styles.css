@@ -54,10 +54,21 @@ header {
   border-bottom: 3pt solid #3b343f; /*!!! se cambi lo spessore del bordo poi devi cambiare anche la traslazione del grid container*/
 }
 
-.logo {
-  width: 8%;
-  height: 8%;
+.pulsante-cambiodistile {
+  border-style: none;
+  background-color: #fcf8f2;
   margin-right: 40px; /*ho distanziato la mucca dal menu*/
+  height: 105px;
+  width: 150px;
+}
+
+.pulsante-cambiodistile:hover {
+  background-color: #fcf8f2;
+}
+
+.logo {
+  width: 75%;
+  height: 75%;
 }
 
 .nomesito {
