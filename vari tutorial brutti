@@ -1,0 +1,71 @@
+<!--per fare il menu a tendina:
+1. nell'html, al posto dell'immagine del menu, mettere 
+   <input type="checkbox" class="menu-btn" id="menu-btn"
+2. sempre nell'html definire un label
+   <label for="menu-btn" class="menu-icon">
+      <span class="nav-icon"> </span>       (perchè uno span?)
+   </label>
+3. definire una lista con le varie voci del menu
+4. in css, definire lo stile della lista.
+   tra le varie cose, mettere overflow: hidden; (e anche list-style: none; perchè se no è brutto)
+5. in css, per fare che quando clicchi scende la lista delle cose:
+   header.menu{  
+    clear: both; $
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+   }
+6. questo non ho capito bene ma lo prendo così com'è
+   .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+   }      (per la tilde guardare https://stackoverflow.com/questions/10782054/what-does-the-tilde-squiggle-twiddle-css-selector-mean
+           significa probabilmente che l'effetto descritto non è applicato agli elementi di menu-btn, ma agli elementi di .menu,
+           purchè siano contenuti nello stesso elemento parente)  
+
+
+
+per fare che l'immagine è un bottone:
+   1.anzichè il tag img che ho usato prima, usare 
+     <button type="submit"><img src="/path/to/image" alt="Submit"></button>
+   2. attribuire al bottone (che adesso è l'immagine) un id tipo "stylebtn"
+   3. su javascript modificarlo tramite quell'id 
+
+
+
+per il cambio di stile guardare lezione di magagna all minuto 1.03.18
+
+
+per mettere cookie al cambio di stile (minuto 1.20.00 circa)
+1. su java
+    if (document.cookie.search("mode") == -1) {
+    document.cookie = "mode=light";
+      questo significa: cercami un documento di tipo cookie che si chiama "mode". (lo cerchi dove? sul browser?)
+      se non lo trovi (ovvro se il search ritorna -1: se invece lo avesse trovato, avrebbe ritornato un numero positivo 
+      che corrisponde in qualche modo alla posizione del file), allora crea un cookie che si chiama "mode" e che ha valore iniziale =light.
+      In altre parole, la prima volta che visiterò il sito la modalità sarà light.
+2. per verificare che sia stato salvato il cookie, andare su console -> archiviazione -> cookie.
+3. il prof aveva già scritto ste funzioni mannagg al magagna non so che cazo significhi
+     function getCookie(cookieName) {
+        let cookie = {};
+        document.cookie.split(';'). forEach (function ... non si legge più) {
+            let [key, value] = el.split ('=');
+            cookie[key,trim()] = value;
+        })
+        return cookie[cookieName];
+     }
+      (qui magagna dice proprio prendetela così com'è e non chiedetevi perchè)
+
+      
+     function ChangeColor () {
+        if (getCookie("mode") === "light"){
+            body.className = "bodyDark" ;
+            document.cookie = "mode=dark";
+        } else {
+            body.className = "bodyLight";
+            document.cookie = "mode=light";
+        }
+     }
+}
+
+--> 
+
+
