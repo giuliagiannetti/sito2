@@ -64,6 +64,7 @@ header {
 
 .pulsante-cambiodistile:hover {
   background-color: #fcf8f2;
+  cursor: pointer;
 }
 
 .logo {
