@@ -51,7 +51,9 @@ header {
   justify-content: end; /*ti allinea tutto a destra*/
   align-items: center; /*non ho capito cosa fa*/
   padding: 10px 5%; /*scritto così significa che c'è un margine di 30px dall'alto e dal basso, mentre dell'8% (dello schermo?) dai lati*/
-  border-bottom: 3pt solid #3b343f; /*!!! se cambi lo spessore del bordo poi devi cambiare anche la traslazione del grid container*/
+  /*border-bottom: 3pt solid #3b343f; !!! se cambi lo spessore del bordo poi devi cambiare anche la traslazione del grid container*/
+/*box-shadow: 0px 5px 5px #959197;*/
+box-shadow: 0px 5px 5px rgba(59, 52, 63, 0.4);
 }
 
 .pulsante-cambiodistile {
@@ -78,10 +80,50 @@ header {
   margin-right: auto; /*non so perchè ma lo mette a sinistra*/
 }
 
-.menu {
+.menubtn {
   width: 80px;
   height: 80px;
+  cursor:pointer;
+  border: 2px solid #3b343f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.barrasopra {
+  width: 70px;
+  height: 6px;
+  background: #3b343f;
+  border-radius: 5px; 
+  position: absolute;
+  top: 40px; 
+}
+
+.barrainmezzo {
+  width: 70px;
+  height: 6px;
+  background: #3b343f;
+  border-radius: 5px;
+  position: absolute;  
+}
+
+.barrasotto {
+  width: 70px;
+  height: 6px;
+  background: #3b343f;
+  border-radius: 5px;
+  position: absolute; 
+  bottom: 40px; 
+}
+
+input [type="checkbox" i] {
+  -webkit-appearance: none;
+  visibility: hidden;
+  display: none;
+}
+
+
+
 /*fine stile della navbar*/
 
 /*inizio modifica della sidenav*/

@@ -52,14 +52,14 @@ header {/*è tipo un contenitore: defineno lo stile dell'header io definisco lo 
 
 .pulsante-cambiodistile {
   border-style: none;
-  background-color: #fcf8f2;
+  background-color:#3b343f;
   margin-right: 40px; /*ho distanziato la mucca dal menu*/
   height: 105px;
   width: 150px;
 }
 
 .pulsante-cambiodistile:hover {
-  background-color: #fcf8f2;
+  background-color:#3b343f;
 }
 
 .logo {
@@ -106,7 +106,7 @@ header {/*è tipo un contenitore: defineno lo stile dell'header io definisco lo 
 }
 
 .sidenav-cornice {
-  border: 3pt solid #3b343f;
+  border: 3pt solid #fcf8f2;
   margin: 144px 20px 40px 0px;
   padding-top: 100px; /*l'altezza della navbar (104px) più altri 100px*/
   height: 500px;
