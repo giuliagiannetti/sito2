@@ -26,11 +26,13 @@ body {
 }
 
 p {
-  color: #3b343f; /*trovare un modo per abbinare questo colore letteralmente a ogni elemento che vogliamo sia nero*/
+  color: #3b343f;
+  /*trovare un modo per abbinare questo colore letteralmente a ogni elemento che vogliamo sia nero*/
 }
 
 a {
-  display: block; /*trasforma l'elemento in block perchè se no le parole si posizionano una accanto all'altra*/
+  display: block;
+  /*trasforma l'elemento in block perchè se no le parole si posizionano una accanto all'altra*/
   text-decoration: none;
   color: #3b343f;
 }
@@ -48,18 +50,22 @@ header {
   /*justify-content: space-between;
      fa sì che il primo e l'ultimo vengano spinti a destra e a sinistra del contenitore,
       mentre l'elemento/i (?) nel mezzo occuperà(/nno) una posizione intermedia. Non ci serve in realtà lol*/
-  justify-content: end; /*ti allinea tutto a destra*/
-  align-items: center; /*non ho capito cosa fa*/
-  padding: 10px 5%; /*scritto così significa che c'è un margine di 30px dall'alto e dal basso, mentre dell'8% (dello schermo?) dai lati*/
+  justify-content: end;
+  /*ti allinea tutto a destra*/
+  align-items: center;
+  /*non ho capito cosa fa*/
+  padding: 10px 5%;
+  /*scritto così significa che c'è un margine di 30px dall'alto e dal basso, mentre dell'8% (dello schermo?) dai lati*/
   /*border-bottom: 3pt solid #3b343f; !!! se cambi lo spessore del bordo poi devi cambiare anche la traslazione del grid container*/
-/*box-shadow: 0px 5px 5px #959197;*/
-box-shadow: 0px 5px 5px rgba(59, 52, 63, 0.4);
+  /*box-shadow: 0px 5px 5px #959197;*/
+  box-shadow: 0px 5px 5px rgba(59, 52, 63, 0.4);
 }
 
 .pulsante-cambiodistile {
   border-style: none;
   background-color: #fcf8f2;
-  margin-right: 40px; /*ho distanziato la mucca dal menu*/
+  margin-right: 40px;
+  /*ho distanziato la mucca dal menu*/
   height: 105px;
   width: 150px;
 }
@@ -77,7 +83,8 @@ box-shadow: 0px 5px 5px rgba(59, 52, 63, 0.4);
 .nomesito {
   font-family: "eckma", sans-serif;
   font-size: 40pt;
-  margin-right: auto; /*non so perchè ma lo mette a sinistra*/
+  margin-right: auto;
+  /*non so perchè ma lo mette a sinistra*/
 }
 
 input[type=checkbox] {
@@ -91,14 +98,14 @@ input[type=checkbox] {
 .menubtn {
   width: 80px;
   height: 80px;
-  cursor:pointer;
+  cursor: pointer;
   border: 2px solid #3b343f;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.barre{
+.barre {
   position: relative;
   display: flex;
   justify-content: center;
@@ -110,17 +117,17 @@ input[type=checkbox] {
   background: #3b343f;
   border-radius: 5px;
   position: absolute;
-  transition: 0.3s ease;  
+  transition: 0.3s ease;
 }
 
 .barrasopra {
   width: 70px;
   height: 6px;
   background: #3b343f;
-  border-radius: 5px; 
+  border-radius: 5px;
   position: absolute;
   transition: 0.3s ease;
-  top: -20px; 
+  top: 40px;
 }
 
 .barrasotto {
@@ -128,24 +135,24 @@ input[type=checkbox] {
   height: 6px;
   background: #3b343f;
   border-radius: 5px;
-  position: absolute; 
+  position: absolute;
   transition: 0.3s ease;
-  bottom: -26px;
+  bottom: 40px;
 }
 
-input[type=checkbox]:checked ~ .barrasopra {
+input[type="checkbox"]:checked~.barrasopra {
   transform: rotate(-45deg);
   width: 70px;
   transform-origin: right;
   top: -25px;
-  }
+}
 
-  input[type=checkbox]:checked ~ .barrasotto {
-    transform: rotate(45deg);
-    width: 70px;
-    transform-origin: right;
-    top: 25px;
-    }
+input[type="checkbox"]:checked~.barrasotto {
+  transform: rotate(45deg);
+  width: 70px;
+  transform-origin: right;
+  top: 25px;
+}
 
 
 
@@ -180,7 +187,8 @@ input[type=checkbox]:checked ~ .barrasopra {
 .sidenav-cornice {
   border: 3pt solid #3b343f;
   margin: 144px 20px 40px 0px;
-  padding-top: 100px; /*l'altezza della navbar (104px) più altri 100px*/
+  padding-top: 100px;
+  /*l'altezza della navbar (104px) più altri 100px*/
   height: 500px;
   overflow: scroll;
 }
@@ -212,16 +220,19 @@ input[type=checkbox]:checked ~ .barrasopra {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #000000;
 }
+
 /*fine scrollbar*/
 
 /*inizio modifica della parte principale (storie dei font)*/
 .storiefont {
-  margin-left: 33.33%; /* traslo a destra della stessa larghezza della sidebar, così appare accanto */
+  margin-left: 33.33%;
+  /* traslo a destra della stessa larghezza della sidebar, così appare accanto */
   margin-top: 130px;
   padding: 0px 5% 0px 40pt;
   z-index: 1;
   background-color: transparent;
 }
+
 .stofont-titoli {
   font-size: 89pt;
 }
@@ -230,7 +241,11 @@ input[type=checkbox]:checked ~ .barrasopra {
   font-size: 20pt;
 }
 
-.bodonimargin, .frankmargin, .helvmargin, .garamargin, .univmargin {
+.bodonimargin,
+.frankmargin,
+.helvmargin,
+.garamargin,
+.univmargin {
   margin-bottom: 60pt;
 }
 
@@ -255,9 +270,9 @@ input[type=checkbox]:checked ~ .barrasopra {
 }
 
 #frankgothic {
-  font-family: franklin-gothic-urw,sans-serif;
-font-weight: 400;
-font-style: normal;
+  font-family: franklin-gothic-urw, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .cerchio {
@@ -269,7 +284,7 @@ font-style: normal;
   float: right;
   outline-width: 999px;
   outline-color: aqua;
-  z-index:0;
+  z-index: 0;
 }
 
 .letterehuge {
@@ -285,8 +300,8 @@ font-style: normal;
   .sidenav {
     padding-top: 15px;
   }
+
   .sidenav a {
     font-size: 18px;
   }
 }
-
