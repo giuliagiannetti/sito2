@@ -80,6 +80,12 @@ box-shadow: 0px 5px 5px rgba(59, 52, 63, 0.4);
   margin-right: auto; /*non so perchè ma lo mette a sinistra*/
 }
 
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  visibility: hidden;
+  display: none;
+}
+
 .menubtn {
   width: 80px;
   height: 80px;
@@ -90,13 +96,10 @@ box-shadow: 0px 5px 5px rgba(59, 52, 63, 0.4);
   align-items: center;
 }
 
-.barrasopra {
-  width: 70px;
-  height: 6px;
-  background: #3b343f;
-  border-radius: 5px; 
-  position: absolute;
-  top: 40px; 
+.barre{
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .barrainmezzo {
@@ -104,7 +107,18 @@ box-shadow: 0px 5px 5px rgba(59, 52, 63, 0.4);
   height: 6px;
   background: #3b343f;
   border-radius: 5px;
-  position: absolute;  
+  position: absolute;
+  transition: 0.3s ease;  
+}
+
+.barrasopra {
+  width: 70px;
+  height: 6px;
+  background: #3b343f;
+  border-radius: 5px; 
+  position: absolute;
+  transition: 0.3s ease;
+  top: 40px; 
 }
 
 .barrasotto {
@@ -113,14 +127,23 @@ box-shadow: 0px 5px 5px rgba(59, 52, 63, 0.4);
   background: #3b343f;
   border-radius: 5px;
   position: absolute; 
+  transition: 0.3s ease;
   bottom: 40px; 
 }
 
-input [type="checkbox" i] {
-  -webkit-appearance: none;
-  visibility: hidden;
-  display: none;
-}
+input[type="checkbox"]:checked ~ .barrasopra {
+  transform: rotate(-45deg);
+  width: 70px;
+  transform-origin: right;
+  top: -25px;
+  }
+
+  input[type="checkbox"]:checked ~ .barrasotto {
+    transform: rotate(45deg);
+    width: 70px;
+    transform-origin: right;
+    top: 25px;
+    }
 
 
 
