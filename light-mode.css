@@ -46,18 +46,11 @@ header {
   z-index: 3;
   display: flex;
   background-color: #fcf8f2;
-  /*capire cosa fa il display flex*/
-  /*justify-content: space-between;
-     fa sì che il primo e l'ultimo vengano spinti a destra e a sinistra del contenitore,
-      mentre l'elemento/i (?) nel mezzo occuperà(/nno) una posizione intermedia. Non ci serve in realtà lol*/
-  justify-content: end;
-  /*ti allinea tutto a destra*/
-  align-items: center;
-  /*non ho capito cosa fa*/
+  justify-content: end; /*ti allinea tutto a destra*/
+  align-items: center; /*allinea tutti gli elementi all'interno al centro*/
   padding: 10px 5%;
-  /*scritto così significa che c'è un margine di 30px dall'alto e dal basso, mentre dell'8% (dello schermo?) dai lati*/
+  /*scritto così significa che c'è un "cuscinetto" di 30px dall'alto e dal basso, mentre dell'8% (dello schermo?) dai lati*/
   /*border-bottom: 3pt solid #3b343f; !!! se cambi lo spessore del bordo poi devi cambiare anche la traslazione del grid container*/
-  /*box-shadow: 0px 5px 5px #959197;*/
   box-shadow: 0px 5px 5px rgba(59, 52, 63, 0.4);
 }
 
@@ -87,11 +80,11 @@ header {
   /*non so perchè ma lo mette a sinistra*/
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   -webkit-appearance: none;
   visibility: hidden;
   display: none;
-  width:80px;
+  width: 80px;
   height: 80px;
 }
 
@@ -140,21 +133,19 @@ input[type=checkbox] {
   bottom: 40px;
 }
 
-input[type="checkbox"]:checked~.barrasopra {
+input[type="checkbox"]:checked ~ .barrasopra {
   transform: rotate(-45deg);
   width: 70px;
   transform-origin: right;
   top: -25px;
 }
 
-input[type="checkbox"]:checked~.barrasotto {
+input[type="checkbox"]:checked ~ .barrasotto {
   transform: rotate(45deg);
   width: 70px;
   transform-origin: right;
   top: 25px;
 }
-
-
 
 /*fine stile della navbar*/
 
@@ -241,12 +232,12 @@ input[type="checkbox"]:checked~.barrasotto {
   font-size: 20pt;
 }
 
-.bodonimargin,
-.frankmargin,
-.helvmargin,
-.garamargin,
-.univmargin {
-  margin-bottom: 60pt;
+#bodonimargin,
+#frankmargin,
+#helvmargin,
+#garamargin,
+#univmargin {
+  padding-top: 135px;
 }
 
 #univers {
@@ -308,3 +299,70 @@ input[type="checkbox"]:checked~.barrasotto {
 
 /*INIZIO PAGINA COMPARE*/
 
+.horizon {
+  position: fixed;
+  bottom: 0;
+  height: 200px;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  background-color: rgba(163, 78, 25, 0.9);
+  justify-content: space-between;
+  align-items: center; /*allinea tutti gli elementi all'interno al centro*/
+  padding: 10px 8.33%;
+  box-shadow: 0px -3px 5px rgba(59, 52, 63, 0.4);
+}
+
+.searchbarscacciona-sx {
+  border: 2px solid #3b343f;
+  background-color: #fcf8f2;
+  width: 16.66%;
+  height: 20%;
+  align-self: center;
+  justify-content: center;
+  padding: 10px 20px;
+  margin: auto; /*cosa fa?*/
+}
+
+.searchbarscacciona-dx {
+  border: 2px solid #3b343f;
+  background-color: #fcf8f2;
+  width: 16.66%;
+  height: 20%;
+  align-self: center;
+  justify-content: center;
+  padding: 10px 20px;
+  margin: auto;
+}
+
+.font-container {
+  display: flex;
+  margin-top: 104px;
+  justify-content: space-between;
+  width: 100%;
+  align-self: center;
+  padding-left: 16.66%;
+  padding-right: 16.66%;
+}
+
+.font-sx {
+  width: 33.33%;
+  background-color: aquamarine;
+  height: 100%;
+  transform: translate(0px, -100px);
+}
+
+.font-dx {
+  width: 33.33%;
+  background-color: aquamarine;
+  height: 100%;
+}
+
+.compareletters {
+  width: 100%;
+  height: 400px;
+}
+
+.compareletters p {
+  font-size: 300pt;
+}
