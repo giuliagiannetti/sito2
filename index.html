@@ -32,200 +32,191 @@
       </label>
     </header>
 
-    <div class="grid-container">
-      <div class="sidenav">
-        <!--questo è un contenitore dove sta la sidenav, che è la lista fissa dei font-->
-        <div class="sidenav-cornice">
-          <!--in questa cornice stanno le scritte, è quella con il bordo nero-->
-          <a href="#bodonimargin" class="sidenav-nomi">Bodoni</a>
-          <a href="#frankmargin" class="sidenav-nomi">Franklin Gothic</a>
-          <a href="#garamargin" class="sidenav-nomi">Garamond</a>
-          <a href="#helvmargin" class="sidenav-nomi">Helvetica</a>
-          <a href="#univmargin" class="sidenav-nomi">Univers</a>
-          <p class="sidenav-nomi">font 6</p>
-          <p class="sidenav-nomi">font 7</p>
-          <p class="sidenav-nomi">font 8</p>
-          <p class="sidenav-nomi">font 9</p>
-        </div>
+    
+    <div class="sidenav"> <!--questo è un contenitore dove sta la sidenav, che è la lista fissa dei font-->
+
+      <div class="sidenav-ricerca"> <!--contenitore per la ricerca font-->
+        <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Cerca una font" title="Type in a category">
+        <ul id="myMenu">
+          <div class="contenitore-sidenav-nomi">
+            <li><a href="#bodonimargin" class="sidenav-nomi">Bodoni</a></li>
+            <li><a href="#frankmargin" class="sidenav-nomi">Franklin Gothic</a></li>
+            <li><a href="#garamargin" class="sidenav-nomi ">Garamond</a></li>
+            <li><a href="#helvmargin" class="sidenav-nomi">Helvetica</a></li>
+            <li><a href="#univmargin" class="sidenav-nomi">Univers</a></li>
+          </div>
+        </ul>
       </div>
-      <p class="letterehuge" id="bodoni">B</p>
-      <div class="storiefont">
-        <div id="bodonimargin">
-          <p class="stofont-titoli" id="bodoni">Bodoni</p>
-          <div class="cerchio 1"></div>
-          <p class="stofont-testi" id="bodoni">
-            Bodoni è un tipo di carattere con grazie disegnato da Giovanni
-            Battista Bodoni (1740-1813), caratterizzato da un alto contrasto tra
-            le linee spesse e quelle sottili. È il classico esempio di carattere
-            con grazie moderno. Le grazie del Bodoni, oltre ad essere molto
-            sottili, sono anche quasi perpendicolari al tratto principale, in
-            contrasto con le grazie che si curvano dolcemente dei cosiddetti
-            tipi "vecchio stile" o rinascimentali. Inoltre, l'enfasi è sui
-            tratti verticali, dando al carattere un aspetto pulito ed elegante,
-            anche se un po' freddo. Lo stile originale del Bodoni è
-            periodicamente ripreso da altri caratteri. Durante l'epoca della
-            composizione a piombo, ogni casa produttrice di caratteri aveva la
-            propria versione (adattata) del Bodoni. Anche oggi il Bodoni non è
-            un carattere definito, ma una famiglia di versioni leggermente
-            differenti l'una dall'altra, ciascuna con le proprie particolarità.
-            Alcune di queste versioni, come il Bauer Bodoni, mettono in evidenza
-            il contrasto estremo fra le linee sottili e quelle principali, che
-            può essere reso oggi assai più pronunciato grazie alle tecniche
-            digitali (un risultato impossibile anche per i migliori cesellatori
-            del diciottesimo secolo). Tuttavia, quando il carattere viene usato
-            per il testo principale, e dunque a dimensioni piccole, le
-            sottilissime grazie di questa variante diventano quasi invisibili,
-            riducendo così la leggibilità. Altre versioni, come l'ATF Bodoni
-            disegnato da Morris Fuller Benton, catturano il gusto essenziale del
-            Bodoni, dando maggiore importanza alla leggibilità piuttosto che
-            portare all'estremo le possibilità tecniche.
-          </p>
-        </div>
-        <div id="frankmargin">
-          <p class="stofont-titoli" id="frankgothic">Franklin Gothic</p>
-          <div class="cerchio 2"></div>
-          <p class="stofont-testi" id="frankgothic">
-            Franklin Gothic è un tipo di carattere sans-serif disegnato da
-            Morris Fuller Benton (1872-1948) nel 1903. È uno degli oltre 200
-            tipi disegnati da Benton. Si presume che il nome sia un'attribuzione
-            a Benjamin Franklin, mentre l'attributo "gothic" è l'equivalente
-            (anche se sempre meno usato) di sans-serif nei paesi anglofoni.
-            L'intera famiglia di caratteri, che include anche le varianti
-            condensata ed extra-condensata, fu pubblicata negli anni tra il 1902
-            ed il 1912. Include inoltre diversi spessori, in crescendo: book,
-            medium, demi, heavy. Si distingue da molti altri caratteri
-            sans-serif per la sua a tradizionale e particolarmente per la sua g
-            a due anelli (cosa abbastanza rara per un carattere sans-serif). La
-            coda della Q parte dal centro del fondo del corpo della lettera e
-            curva verso destra mantenendo sempre lo stesso peso. Nonostante un
-            calo di popolarità dovuto all'avvento di caratteri più moderni come
-            Cavo e Futura questo carattere tipografico è stato riscoperto dai
-            disegnatori di caratteri americani negli anni '40 e da allora è
-            stato molto richiesto. Il carattere è ancora ampiamente utilizzato
-            nelle pubblicità e nei titoli.c
-          </p>
-        </div>
-        <div id="garamargin">
-          <p class="stofont-titoli garamond" id="garamond">Garamond</p>
-          <div class="cerchio 3"></div>
-          <p class="stofont-testi garamond" id="garamond">
-            Il Garamond è uno dei caratteri più usati nell'editoria. È il
-            carattere ufficialmente adottato per tutta la corrispondenza
-            elaborata del Gruppo Ferrovie dello Stato Italiane. Un carattere
-            simile al Garamond fu usato anche per stampare le cifre delle targhe
-            automobilistiche italiane fino al 1951. Il Garamond ha origine
-            addirittura in epoca rinascimentale quando, nel XVI secolo, il suo
-            creatore Claude Garamond, che già da tempo svolge la professione
-            nella tipografia e nell’editoria, inizia a lavorare presso la corte
-            del re Francesco I di Francia. Quest’ultimo infatti commissiona al
-            tipografo tre modelli di caratteri dell’alfabeto greco da utilizzare
-            per le pubblicazioni dedicate al re stesso. Nasce così il Greco del
-            Re,precessore di ciò che Garamond avrebbe poi creato in ambito
-            tipografico. Partendo dallo studio dei caratteri antichi egli
-            elabora e perfeziona le proporzioni, soprattutto applicate alle
-            forme tonde , tanto che il suo stile viene presto ampliamente
-            apprezzato e riconosciuto, arrivando a sostituire l’impiego dei
-            caratteri gotici fino a quel tempo generalmente utilizzati, e da
-            contribuire alla definizione di quelli che oggi chiamiamo
-            comunemente font serif, ovvero “con grazie”. Tuttavia, così come
-            prolifica è l’attività del maesto, in tutta la prima metà del
-            Cinquecento è talmente grande la quantità di font creati dai diversi
-            tipografi, che in molti casi è difficile stabilire un’attribuzione
-            precisa. In ogni caso a Garamond vengono attribuiti con certezza, in
-            una pubblicazione del 2010 curata da Hendrik Vervliet, 34 font tra
-            romani, italici, grechi e ebraici, più altri 3 di attribuzione
-            incerta.
-          </p>
-        </div>
-        <div id="helvmargin">
-          <p class="stofont-titoli" id="helvetica">Helvetica</p>
-          <div class="cerchio 4"></div>
-          <p class="stofont-testi" id="helvetica">
-            Helvetica è un carattere tipografico creato nel 1957 da un'idea di
-            Eduard Hoffmann, direttore della fonderia Haas di Münchenstein
-            (Basilea), in Svizzera, e disegnato da Max Miedinger. Nel 1957 Max
-            Miedinger lo disegna per la fonderia Haas, sviluppando quindi un
-            nuovo carattere senza grazie per salvare l'azienda dall'imminente
-            fallimento che di lì a poco sarebbe stato causato dal successo
-            globale del carattere Akzidenz Grotesk, della concorrente stamperia
-            H. Berthold AG. Incaricò Miedinger, un ex impiegato commerciale
-            della Haas, e ora disegnatore freelance, di disegnare un set di
-            caratteri senza grazie da aggiungere alla loro linea. Il risultato
-            fu dapprima denominato Neue Haas Grotesk, ma il nome fu
-            successivamente cambiato in Helvetica (derivato da Helvetia, il nome
-            latino per la Svizzera), quando le società tedesche Stempel e la
-            Linotype introdussero sul mercato la serie completa di caratteri nel
-            1961. Introdotto nel bel mezzo di un'onda rivoluzionaria nel campo
-            del lettering, la popolarità del carattere svizzero fece presto
-            breccia nelle agenzie di pubblicità, molte delle quali vendettero
-            questo nuovo stile di disegno ai loro clienti; l'Helvetica così
-            comparve rapidamente nei marchi aziendali, nel signage per i sistemi
-            di trasporto, nelle stampe d'arte ed in altri innumerevoli campi
-            della comunicazione d'impresa. Nel dicembre 1989, grazie
-            all'intervento di Massimo Vignelli, l'Helvetica divenne il carattere
-            tipografico ufficiale per l'intera segnaletica della città di New
-            York, dalla metropolitana ai treni, dai cartelli stradali alle mappe
-            della città, vincendo la sfida contro l'allora preferito Standard
-            (Akzidenz Grotesk).
-          </p>
-        </div>
-        <div id="univmargin">
-          <p class="stofont-titoli" id="univers">Univers</p>
-          <div class="cerchio 5"></div>
-          <p class="stofont-testi" id="univers">
-            Univers è un carattere senza grazie di tipo realist creato da Adrian
-            Frutiger, i cui studi iniziarono nel 1954 e finirono nel 1957. Sia
-            Univers che Helvetica, con cui a volte il primo viene confuso,
-            prendono ispirazione dal carattere del 1896 Akzidenz Grotesk che ha
-            avuto molta importanza nello stile svizzero del design grafico. I
-            differenti pesi e variazioni tra i caratteri che compongono la
-            famiglia sono distinti tramite numeri invece che tramite nomi, un
-            sistema che è stato usato da Frutiger anche per altri caratteri.
-            Infatti Frutiger ha immaginato una grande famiglia di caratteri con
-            diverse larghezze e pesi che però mantiene un idioma di design
-            unificato. La famiglia Univers comprende 14 larghezze più 14
-            corrispondenti pesi Oblique oltre a 16 varianti con il charset
-            dell'Europa centrale e del cirillico. Nel 1997 Frutiger ha
-            rielaborato l'Univers in collaborazione con Linotype, e ha creato il
-            Linotype Univers, che comprende 63 pesi. Il nuovo Univers comprende
-            molti pesi "estremi" come Ultra Light o Extended Heavy e sono stati
-            aggiunti anche alcuni caratteri monospazio. Il sistema numerico di
-            classificazione è stato portato a tre cifre per comprendere il
-            grande numero di variazioni comprese nella famiglia. Univers
-            raggiunse una grande popolarità tra il 1960 e il 1970. Viene
-            utilizzato in una versione modificata dalla Swiss International Air
-            Lines (precedentemente la Swissair usava il Futura), dalla Deutsche
-            Bank e inoltre viene usato per la segnaletica un po' dappertutto nel
-            mondo. General Electric l'ha usato dal 1986 al 2004 prima di passare
-            al GE Inspira. Apple Inc. ha usato questo carattere nella versione
-            condensed oblique per i tasti di molte tastiere. È conosciuto per le
-            sue linee pulite e per la leggibilità a grande distanza. Il Montreal
-            Metro, la San Francisco BART (Bay Area Rapid Transit), l'Aeroporto
-            di Francoforte sul Meno e il sistema di trasporti di Walt Disney
-            World fanno largo uso di questo carattere. Alcuni dei London
-            Boroughs usano l'Univers Bold Condensed per i segnali stradali, La
-            Royal Air Force lo adotta dal 2006 per tutto il materiale di
-            merchandising e per il suo logo. Così anche l'ONG Emergency.
-            L'Ordnance Survey utilizza Univers per le proprie mappe (aggiungendo
-            dei tagli sulle l e t minuscole e altre piccole cambiamenti per
-            aiutare a distinguere le lettere dai dettagli della mappa) sul quale
-            detiene tutti i diritti. Nel 2006, l'Office of Fair Trading ha
-            adottato Univers nella sua veste tipografica aziendale alla
-            dimensione 12 punti per permettere alle persone con problemi di
-            vista di leggere facilmente le proprie pubblicazioni. Anche Rand
-            McNally ha usato Univers sulle proprie mappe e atlanti dagli anni
-            '70 al 2004 quando è passata a Frutiger. Univers è contenuto nella
-            stampante HP LaserJet 1100. Installando una LaserJet 1100 su un
-            sistema Windows vengono aggiunti molti nuovi font che presentano
-            l'icona di una stampante accanto al loro nome. L'icona indica che il
-            font è un printer font (che verrà processato dalla stampante) e non
-            un font di sistema (processato e rasterizzato dal sistema, come ad
-            esempio un carattere TrueType o OpenType).
-          </p>
-        </div>
+
+      <!--<div class="pulisci-sidenav"><div class="sidenav-cornice" >-->
+        <!--in questa cornice stanno le scritte, 
+          è quella con il bordo nero-->
+        <!--<a href="#bodonimargin" class="sidenav-nomi">Bodoni</a>
+        <a href="#frankmargin" class="sidenav-nomi">Franklin Gothic</a>
+        <a href="#garamargin" class="sidenav-nomi ">Garamond</a>
+        <a href="#helvmargin" class="sidenav-nomi">Helvetica</a>
+        <a href="#univmargin" class="sidenav-nomi">Univers</a>
+        <p class="sidenav-nomi">font 6</p>
+        <p class="sidenav-nomi">font 7</p>
+        <p class="sidenav-nomi">font 8</p>
+        <p class="sidenav-nomi">font 9</p>
+      </div>-->
+
+      
+    </div>
+    <!--la lettera B gigante per Bodoni<p class="letterehuge" id="bodoni">B</p>-->
+    <div class="storiefont">
+      <div id="bodonimargin">
+        <p class="stofont-titoli" id="bodoni">Bodoni</p>
+        <div class="cerchio 1"></div>
+        <p class="stofont-testi" id="bodoni">Bodoni è un tipo di carattere con grazie disegnato da Giovanni Battista
+          Bodoni (1740-1813), caratterizzato da un alto contrasto tra le linee spesse e quelle sottili. È il classico
+          esempio di carattere con grazie moderno.
+
+          Le grazie del Bodoni, oltre ad essere molto sottili, sono anche quasi perpendicolari al tratto principale, in
+          contrasto con le grazie che si curvano dolcemente dei cosiddetti tipi "vecchio stile" o rinascimentali.
+          Inoltre, l'enfasi è sui tratti verticali, dando al carattere un aspetto pulito ed elegante, anche se un po'
+          freddo.
+
+          Lo stile originale del Bodoni è periodicamente ripreso da altri caratteri. Durante l'epoca della composizione
+          a piombo, ogni casa produttrice di caratteri aveva la propria versione (adattata) del Bodoni. Anche oggi il
+          Bodoni non è un carattere definito, ma una famiglia di versioni leggermente differenti l'una dall'altra,
+          ciascuna con le proprie particolarità.
+          Alcune di queste versioni, come il Bauer Bodoni, mettono in evidenza il contrasto estremo fra le linee sottili
+          e quelle principali, che può essere reso oggi assai più pronunciato grazie alle tecniche digitali (un
+          risultato impossibile anche per i migliori cesellatori del diciottesimo secolo). Tuttavia, quando il carattere
+          viene usato per il testo principale, e dunque a dimensioni piccole, le sottilissime grazie di questa variante
+          diventano quasi invisibili, riducendo così la leggibilità.
+
+          Altre versioni, come l'ATF Bodoni disegnato da Morris Fuller Benton, catturano il gusto essenziale del Bodoni,
+          dando maggiore importanza alla leggibilità piuttosto che portare all'estremo le possibilità tecniche.
+        </p>
+        
+      </div>
+      <div id="frankmargin">
+        <p class="stofont-titoli" id="frankgothic">Franklin Gothic</p>
+        <div class="cerchio 2"></div>
+        <p class="stofont-testi" id="frankgothic">Franklin Gothic è un tipo di carattere sans-serif disegnato da Morris
+          Fuller Benton (1872-1948) nel 1903. È uno degli oltre 200 tipi disegnati da Benton.
+
+          Si presume che il nome sia un'attribuzione a Benjamin Franklin, mentre l'attributo "gothic" è l'equivalente
+          (anche se sempre meno usato) di sans-serif nei paesi anglofoni.
+
+          L'intera famiglia di caratteri, che include anche le varianti condensata ed extra-condensata, fu pubblicata
+          negli anni tra il 1902 ed il 1912. Include inoltre diversi spessori, in crescendo: book, medium, demi, heavy.
+
+          Si distingue da molti altri caratteri sans-serif per la sua a tradizionale e particolarmente per la sua g a
+          due anelli (cosa abbastanza rara per un carattere sans-serif). La coda della Q parte dal centro del fondo del
+          corpo della lettera e curva verso destra mantenendo sempre lo stesso peso.
+
+          Nonostante un calo di popolarità dovuto all'avvento di caratteri più moderni come Cavo e Futura questo
+          carattere tipografico è stato riscoperto dai disegnatori di caratteri americani negli anni '40 e da allora è
+          stato molto richiesto. Il carattere è ancora ampiamente utilizzato nelle pubblicità e nei titoli.c
+        </p>
+        
+      </div>
+      <div id="garamargin">
+        <p class="stofont-titoli garamond" id="garamond">Garamond</p>
+        <div class="cerchio 3"></div>
+        <p class="stofont-testi garamond" id="garamond">Il Garamond è uno dei caratteri più usati nell'editoria. È il
+          carattere ufficialmente adottato per tutta la corrispondenza elaborata del Gruppo Ferrovie dello Stato
+          Italiane. Un carattere simile al Garamond fu usato anche per stampare le cifre delle targhe automobilistiche
+          italiane fino al 1951.
+
+          Il Garamond ha origine addirittura in epoca rinascimentale quando, nel XVI secolo, il suo creatore Claude
+          Garamond, che già da tempo svolge la professione nella tipografia e nell’editoria, inizia a lavorare presso la
+          corte del re Francesco I di Francia. Quest’ultimo infatti commissiona al tipografo tre modelli di caratteri
+          dell’alfabeto greco da utilizzare per le pubblicazioni dedicate al re stesso. Nasce così il Greco del
+          Re,precessore di ciò che Garamond avrebbe poi creato in ambito tipografico.
+
+          Partendo dallo studio dei caratteri antichi egli elabora e perfeziona le proporzioni, soprattutto applicate
+          alle forme tonde , tanto che il suo stile viene presto ampliamente apprezzato e riconosciuto, arrivando a
+          sostituire l’impiego dei caratteri gotici fino a quel tempo generalmente utilizzati, e da contribuire alla
+          definizione di quelli che oggi chiamiamo comunemente font serif, ovvero “con grazie”.
+
+          Tuttavia, così come prolifica è l’attività del maesto, in tutta la prima metà del Cinquecento è talmente
+          grande la quantità di font creati dai diversi tipografi, che in molti casi è difficile stabilire
+          un’attribuzione precisa. In ogni caso a Garamond vengono attribuiti con certezza, in una pubblicazione del
+          2010 curata da Hendrik Vervliet, 34 font tra romani, italici, grechi e ebraici, più altri 3 di attribuzione
+          incerta.
+        </p>
+        
+      </div>
+      <div id="helvmargin">
+        <p class="stofont-titoli" id="helvetica">Helvetica</p>
+        <div class="cerchio 4"></div>
+        <p class="stofont-testi" id="helvetica">Helvetica è un carattere tipografico creato nel 1957 da un'idea di
+          Eduard Hoffmann, direttore della fonderia Haas di Münchenstein (Basilea), in Svizzera, e disegnato da Max
+          Miedinger.
+
+          Nel 1957 Max Miedinger lo disegna per la fonderia Haas, sviluppando quindi un nuovo carattere senza grazie per
+          salvare l'azienda dall'imminente fallimento che di lì a poco sarebbe stato causato dal successo globale del
+          carattere Akzidenz Grotesk, della concorrente stamperia H. Berthold AG. Incaricò Miedinger, un ex impiegato
+          commerciale della Haas, e ora disegnatore freelance, di disegnare un set di caratteri senza grazie da
+          aggiungere alla loro linea.
+
+          Il risultato fu dapprima denominato Neue Haas Grotesk, ma il nome fu successivamente cambiato in Helvetica
+          (derivato da Helvetia, il nome latino per la Svizzera), quando le società tedesche Stempel e la Linotype
+          introdussero sul mercato la serie completa di caratteri nel 1961.
+
+          Introdotto nel bel mezzo di un'onda rivoluzionaria nel campo del lettering, la popolarità del carattere
+          svizzero fece presto breccia nelle agenzie di pubblicità, molte delle quali vendettero questo nuovo stile di
+          disegno ai loro clienti; l'Helvetica così comparve rapidamente nei marchi aziendali, nel signage per i sistemi
+          di trasporto, nelle stampe d'arte ed in altri innumerevoli campi della comunicazione d'impresa. Nel dicembre
+          1989, grazie all'intervento di Massimo Vignelli, l'Helvetica divenne il carattere tipografico ufficiale per
+          l'intera segnaletica della città di New York, dalla metropolitana ai treni, dai cartelli stradali alle mappe
+          della città, vincendo la sfida contro l'allora preferito Standard (Akzidenz Grotesk).
+        </p>
+        
+      </div>
+      <div id="univmargin">
+        <p class="stofont-titoli" id="univers"> Univers</p>
+        <div class="cerchio 5"></div>
+        <p class="stofont-testi" id="univers">Univers è un carattere senza grazie di tipo realist creato da Adrian
+          Frutiger, i cui studi iniziarono nel 1954 e finirono nel 1957. Sia Univers che Helvetica, con cui a volte il
+          primo viene confuso, prendono ispirazione dal carattere del 1896 Akzidenz Grotesk che ha avuto molta
+          importanza nello stile svizzero del design grafico.
+
+          I differenti pesi e variazioni tra i caratteri che compongono la famiglia sono distinti tramite numeri invece
+          che tramite nomi, un sistema che è stato usato da Frutiger anche per altri caratteri. Infatti Frutiger ha
+          immaginato una grande famiglia di caratteri con diverse larghezze e pesi che però mantiene un idioma di design
+          unificato.
+
+          La famiglia Univers comprende 14 larghezze più 14 corrispondenti pesi Oblique oltre a 16 varianti con il
+          charset dell'Europa centrale e del cirillico.
+
+          Nel 1997 Frutiger ha rielaborato l'Univers in collaborazione con Linotype, e ha creato il Linotype Univers,
+          che comprende 63 pesi. Il nuovo Univers comprende molti pesi "estremi" come Ultra Light o Extended Heavy e
+          sono stati aggiunti anche alcuni caratteri monospazio. Il sistema numerico di classificazione è stato portato
+          a tre cifre per comprendere il grande numero di variazioni comprese nella famiglia.
+
+          Univers raggiunse una grande popolarità tra il 1960 e il 1970. Viene utilizzato in una versione modificata
+          dalla Swiss International Air Lines (precedentemente la Swissair usava il Futura), dalla Deutsche Bank e
+          inoltre viene usato per la segnaletica un po' dappertutto nel mondo. General Electric l'ha usato dal 1986 al
+          2004 prima di passare al GE Inspira. Apple Inc. ha usato questo carattere nella versione condensed oblique per
+          i tasti di molte tastiere. È conosciuto per le sue linee pulite e per la leggibilità a grande distanza. Il
+          Montreal Metro, la San Francisco BART (Bay Area Rapid Transit), l'Aeroporto di Francoforte sul Meno e il
+          sistema di trasporti di Walt Disney World fanno largo uso di questo carattere. Alcuni dei London Boroughs
+          usano l'Univers Bold Condensed per i segnali stradali, La Royal Air Force lo adotta dal 2006 per tutto il
+          materiale di merchandising e per il suo logo. Così anche l'ONG Emergency.
+
+          L'Ordnance Survey utilizza Univers per le proprie mappe (aggiungendo dei tagli sulle l e t minuscole e altre
+          piccole cambiamenti per aiutare a distinguere le lettere dai dettagli della mappa) sul quale detiene tutti i
+          diritti. Nel 2006, l'Office of Fair Trading ha adottato Univers nella sua veste tipografica aziendale alla
+          dimensione 12 punti per permettere alle persone con problemi di vista di leggere facilmente le proprie
+          pubblicazioni. Anche Rand McNally ha usato Univers sulle proprie mappe e atlanti dagli anni '70 al 2004 quando
+          è passata a Frutiger.
+
+          Univers è contenuto nella stampante HP LaserJet 1100. Installando una LaserJet 1100 su un sistema Windows
+          vengono aggiunti molti nuovi font che presentano l'icona di una stampante accanto al loro nome. L'icona indica
+          che il font è un printer font (che verrà processato dalla stampante) e non un font di sistema (processato e
+          rasterizzato dal sistema, come ad esempio un carattere TrueType o OpenType).
+        </p>
       </div>
     </div>
-    <script type="text/javascript" src="script.js"></script>
-  </body>
-  <script type="text/javascript" src="script.js"></script>
+  </div>
+  <script type="text/javascript" src="script.js"> </script>
+</body>
+<script type="text/javascript" src="script.js"> </script>
+
 </html>
