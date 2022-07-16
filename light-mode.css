@@ -357,7 +357,6 @@ input[type="checkbox"]:checked ~ .barrasotto {
   background-color: aquamarine;
   height: 100%;
   transform: translate(0px, -100px);
-
 }
 
 .compareletters {
