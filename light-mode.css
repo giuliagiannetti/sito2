@@ -28,7 +28,7 @@ body {
 .sidenav-ricerca {
   width: 33.33%;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   top: 0;
   left: 0;
   background-color: #fcf8f2;
@@ -55,7 +55,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 200;
   display: flex;
   background-color: #fcf8f2;
   justify-content: end; /*ti allinea tutto a destra*/
@@ -120,7 +120,7 @@ input[type="checkbox"] {
   width: 70px;
   height: 6px;
   background: #3b343f;
-  border-radius: 5px;
+  border-radius: 50%;
   position: absolute;
   transition: 0.3s ease;
 }
@@ -129,7 +129,7 @@ input[type="checkbox"] {
   width: 70px;
   height: 6px;
   background: #3b343f;
-  border-radius: 5px;
+  border-radius: 50%;
   position: absolute;
   transition: 0.3s ease;
   top: 40px;
@@ -139,7 +139,7 @@ input[type="checkbox"] {
   width: 70px;
   height: 6px;
   background: #3b343f;
-  border-radius: 5px;
+  border-radius: 50%;
   position: absolute;
   transition: 0.3s ease;
   bottom: 40px;
@@ -152,10 +152,6 @@ input[type="checkbox"]:checked ~ .barrasopra {
   top: -25px;
 }
 
-#myMenu{
-  display: none;
-}
-
 input[type="checkbox"]:checked ~ .barrasotto {
   transform: rotate(45deg);
   width: 70px;
@@ -166,11 +162,41 @@ input[type="checkbox"]:checked ~ .barrasotto {
 /*fine stile della navbar*/
 
 /*inizio modifica della sidenav*/
+.pulisci-sidenav{
+  display: none;
+}
+
+#mySearch{
+  border: 3pt solid #3b343f;
+  margin: 0px 0 40px 0px;
+  /*l'altezza della navbar (104px) più altri 100px*/
+  height: 117.6px;
+  overflow: stroll;
+  font-size: 20pt;
+  width: 100%;
+  font-family: "janson";
+  border-radius: 58.8px;
+  padding-left: 40px;
+  background-color:#fcf8f2;
+}
+
+#mySearch:focus{
+  background-color: aquamarine;
+  outline: none;
+
+}
+#myMenu{
+  list-style: none;
+width: 100%;
+padding-left: 0px; /*bisogna specificare padding 0 se no ti lascia un padding a sinistra, credo te lo lasci perché è una lista*/
+}
+
+
 .sidenav {
   height: 100%;
   width: 33.33%;
   position: fixed;
-  z-index: 2;
+  z-index: 100;
   top: 0;
   left: 0;
   background-color: #fcf8f2;
@@ -185,10 +211,15 @@ input[type="checkbox"]:checked ~ .barrasotto {
   text-align: left;
   margin-left: 40px;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .sidenav a:hover {
-  color: black;
+letter-spacing:2pt;
+}
+
+.sidenav a::first-line{
+  margin-top: 100px;
 }
 
 .sidenav-cornice {
@@ -200,11 +231,25 @@ input[type="checkbox"]:checked ~ .barrasotto {
   overflow: scroll;
 }
 
+.contenitore-sidenav-nomi{
+  border: 3pt solid #3b343f;
+  margin: 0px 0 40px 0px;
+  /*l'altezza della navbar (104px) più altri 100px*/
+  height: 33.33%;
+  overflow: stroll;
+  width: 100%;
+  font-family: "janson";
+  border-radius: 58.8px;
+  border: 3pt solid #3b343f;
+  width: 100%;
+  font-family: "janson";
+  border-radius: 58.8px;
+}
+
 .sidenav-nomi {
   font-family: "janson", serif;
   font-size: 30pt;
   text-align: left;
-  margin-left: 40px;
   margin-top: 30px;
 }
 
@@ -236,16 +281,19 @@ input[type="checkbox"]:checked ~ .barrasotto {
   /* traslo a destra della stessa larghezza della sidebar, così appare accanto */
   margin-top: 130px;
   padding: 0px 5% 0px 40pt;
-  z-index: 1;
+  z-index: 50;
   background-color: transparent;
 }
 
 .stofont-titoli {
   font-size: 89pt;
+
 }
 
 .stofont-testi {
   font-size: 20pt;
+  margin-top: 24pt;
+ 
 }
 
 #bodonimargin,
@@ -299,7 +347,7 @@ input[type="checkbox"]:checked ~ .barrasotto {
   position: absolute;
   right: 70px;
   top: 160px;
-  z-index: -1;
+  z-index: -50;
 }
 
 /*per un responsive che non ci serve?*/
@@ -320,7 +368,7 @@ input[type="checkbox"]:checked ~ .barrasotto {
   bottom: 0;
   height: 200px;
   width: 100%;
-  z-index: 3;
+  z-index: 100;
   display: flex;
   background-color: rgba(163, 78, 25, 0.9);
   justify-content: space-between;
