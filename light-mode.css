@@ -107,6 +107,8 @@ input[type="checkbox"] {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(59, 52, 63, 0.4);
 }
 
 .barre {
@@ -116,8 +118,8 @@ input[type="checkbox"] {
 }
 
 .barrainmezzo {
-  width: 70px;
-  height: 6px;
+  width: 50px;
+  height: 4px;
   background: #3b343f;
   border-radius: 3px;
   position: absolute;
@@ -125,27 +127,27 @@ input[type="checkbox"] {
 }
 
 .barrasopra {
-  width: 70px;
-  height: 6px;
+  width: 50px;
+  height: 4px;
   background: #3b343f;
   border-radius: 3px;
   position: absolute; /*perchè questa è absolute e l'altra è relative? non lo so neanche io,
     la cosa più sensata mi sembrava mettere entrambe relative ma se facevo così le barre si spostavano in orizzontale*/
   transition: 0.3s ease;
-  top: -20px;
+  top: -10px;
 }
 
 .barrasotto {
-  width: 70px;
-  height: 6px;
+  width: 50px;
+  height: 4px;
   background: #3b343f;
   border-radius: 3px;
   position: relative;
   transition: 0.3s ease;
-  top: 20px;
+  top: 10px;
 }
 
-input[type="checkbox"]:checked ~ .barrasopra {
+input[type="checkbox"]:checked ~ .barrasopra {  /*BRUTTA DA RIFARE TUTTA*/
   /*capire sperchè le righe si spostano anche a destra*/
   transform: rotate(-45deg);
   transform-origin: right;
@@ -154,7 +156,7 @@ input[type="checkbox"]:checked ~ .barrasopra {
 
 input[type="checkbox"]:checked ~ .barrasotto {
   transform: rotate(45deg);
-  width: 70px;
+  width: 50px;
   transform-origin: right;
   top: 25px;
 }
