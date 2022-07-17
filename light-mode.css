@@ -162,11 +162,11 @@ input[type="checkbox"]:checked ~ .barrasotto {
 /*fine stile della navbar*/
 
 /*inizio modifica della sidenav*/
-.pulisci-sidenav{
+.pulisci-sidenav {
   display: none;
 }
 
-#mySearch{
+#mySearch {
   border: 3pt solid #3b343f;
   margin: 0px 0 40px 0px;
   /*l'altezza della navbar (104px) più altri 100px*/
@@ -177,20 +177,18 @@ input[type="checkbox"]:checked ~ .barrasotto {
   font-family: "janson";
   border-radius: 58.8px;
   padding-left: 40px;
-  background-color:#fcf8f2;
+  background-color: #fcf8f2;
 }
 
-#mySearch:focus{
-  background-color: aquamarine;
+#mySearch:focus {
+  background-color: #fcf8f2;
   outline: none;
-
 }
-#myMenu{
+#myMenu {
   list-style: none;
-width: 100%;
-padding-left: 0px; /*bisogna specificare padding 0 se no ti lascia un padding a sinistra, credo te lo lasci perché è una lista*/
+  width: 100%;
+  padding-left: 0px; /*bisogna specificare padding 0 se no ti lascia un padding a sinistra, credo te lo lasci perché è una lista*/
 }
-
 
 .sidenav {
   height: 100%;
@@ -215,10 +213,10 @@ padding-left: 0px; /*bisogna specificare padding 0 se no ti lascia un padding a 
 }
 
 .sidenav a:hover {
-letter-spacing:2pt;
+  letter-spacing: 2pt;
 }
 
-.sidenav a::first-line{
+.sidenav a::first-line {
   margin-top: 100px;
 }
 
@@ -231,7 +229,7 @@ letter-spacing:2pt;
   overflow: scroll;
 }
 
-.contenitore-sidenav-nomi{
+.contenitore-sidenav-nomi {
   border: 3pt solid #3b343f;
   margin: 0px 0 40px 0px;
   /*l'altezza della navbar (104px) più altri 100px*/
@@ -287,13 +285,11 @@ letter-spacing:2pt;
 
 .stofont-titoli {
   font-size: 89pt;
-
 }
 
 .stofont-testi {
   font-size: 20pt;
   margin-top: 24pt;
- 
 }
 
 #bodonimargin,
