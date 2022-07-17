@@ -104,7 +104,6 @@ input[type="checkbox"] {
   width: 80px;
   height: 80px;
   cursor: pointer;
-  border: 2px solid #3b343f;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,8 +146,8 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked ~ .barrasopra {
+  /*capire sperchè le righe si spostano anche a destra*/
   transform: rotate(-45deg);
-  width: 70px;
   transform-origin: right;
   top: -25px;
 }
