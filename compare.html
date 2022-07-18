@@ -30,27 +30,56 @@
     </header>
 
     <div class="horizon"> <!--questa è la barra che sta sotto fissa, con la searchbar e tutto-->
-      <div class="searchbarscacciona-sx">searchbar</div>
-      <div class="searchbarscacciona-dx">searchbar</div>
+      <span class="horizon-ricerca-sx"> <!--contenitore per la ricerca font-->
+        <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Cerca una font" title="Type in a category">
+        <ul id="myMenu">
+
+          <div class="contenitore-horizon-nomi"><!--per la ricerca in basso a sinistra-->
+            <li><a href="#bodonimargin-sx" class="sidenav-nomi">Bodoni</a></li>
+            <li><a href="#frankmargin" class="sidenav-nomi">Franklin Gothic</a></li>
+            <li><a href="#garamargin" class="sidenav-nomi ">Garamond</a></li>
+            <li><a href="#helvmargin" class="sidenav-nomi">Helvetica</a></li>
+            <li><a href="#univmargin-sx" class="sidenav-nomi">Univers</a></li>
+          </div>
+        </ul>
+      </span>
+
+
+      <span class="horizon-ricerca-dx">
+        <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Cerca una font" title="Type in a category">
+        <ul id="myMenu">
+
+          <div class="contenitore-horizon-nomi"><!--per la ricerca in basso a destra-->
+            <li><a href="#bodonimargin" class="sidenav-nomi">Bodoni</a></li>
+            <li><a href="#frankmargin" class="sidenav-nomi">Franklin Gothic</a></li>
+            <li><a href="#garamargin" class="sidenav-nomi ">Garamond</a></li>
+            <li><a href="#helvmargin" class="sidenav-nomi">Helvetica</a></li>
+            <li><a href="#univmargin" class="sidenav-nomi">Univers</a></li>
+          </div>
+        </ul>
+      </span>
+
+    
     </div>
 
     <div>compara font</div>
 
     <div class="font-container">
       <div class="font-sx"> <!--questa invece è la colonna con tutte le font che sta a sinistra-->
-        <div class="compareletters" id="bodoni"> <p>a</p> </div>
-        <div class="compareletters" id="frankgothic"> <p>a</p> </div>
-        <div class="compareletters" id="garamond"> <p>a</p> </div>
-        <div class="compareletters" id="helvetica"> <p>a</p> </div>
-        <div class="compareletters" id="univers"> <p>a</p> </div>
+        <div class="compareletters com-bodoni" id="bodonimargin-sx"> <p>a</p> </div>
+        <div class="compareletters com-frank" id="frankmargin"> <p>a</p> </div>
+        <div class="compareletters com-gara" id="garamargin"> <p>a</p> </div>
+        <div class="compareletters com-helv" id="helvmargin"> <p>a</p> </div>
+        <div class="compareletters com-univ" id="univmargin-sx"> <p>a</p> </div>
       </div>
       <div class="font-dx"> <!--stessa cosa ma per i font a destra-->
-        <div class="compareletters" id="bodoni"> <p>a</p> </div>
-        <div class="compareletters" id="frankgothic"> <p>a</p> </div>
-        <div class="compareletters" id="garamond"> <p>a</p> </div>
-        <div class="compareletters" id="helvetica"> <p>a</p> </div>
-        <div class="compareletters" id="univers"> <p>a</p> </div>
-      
+        <div class="compareletters com-bodoni" id="bodonimargin"> <p>a</p> </div>
+        <div class="compareletters com-frank" id="frankmargin"> <p>a</p> </div>
+        <div class="compareletters com-gara" id="garamargin"> <p>a</p> </div>
+        <div class="compareletters com-helv" id="helvmargin"> <p>a</p> </div>
+        <div class="compareletters com-univ" id="univmargin"> <p>a</p> </div>
     </div>
+    <script type="text/javascript" src="script.js"> </script>
+
   </body>
 </html>

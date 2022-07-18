@@ -309,19 +309,19 @@ input[type="checkbox"]:checked ~ .barrasotto {
 }
 
 #garamond {
-  font-family: eb-garamond, serif;
+  font-family: "eb-garamond", serif;
   font-weight: 400;
   font-style: normal;
 }
 
 #bodoni {
-  font-family: bodoni-urw, serif;
+  font-family: "bodoni-urw", serif;
   font-weight: 400;
   font-style: normal;
 }
 
 #frankgothic {
-  font-family: franklin-gothic-urw, sans-serif;
+  font-family: "franklin-gothic-urw", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -362,13 +362,13 @@ input[type="checkbox"]:checked ~ .barrasotto {
 .horizon {
   position: fixed;
   bottom: 0;
-  height: 200px;
+  height: 50%;
   width: 100%;
   z-index: 100;
   display: flex;
   background-color: rgba(163, 78, 25, 0.9);
   justify-content: space-between;
-  align-items: center; /*allinea tutti gli elementi all'interno al centro*/
+  /*align-items: center; /*allinea tutti gli elementi all'interno al centro*/
   padding: 10px 8.33%;
   box-shadow: 0px -3px 5px rgba(59, 52, 63, 0.4);
 }
@@ -427,3 +427,30 @@ input[type="checkbox"]:checked ~ .barrasotto {
 .compareletters p {
   font-size: 300pt;
 }
+
+.com-bodoni{ /* queste clasi che iniziano per "com" servono per associare alle lettere nelle strisce la loro font */
+  font-family:"bodoni-urw", serif;
+}
+
+.com-frank{
+  font-family:"franklin-gothic-urw", sans-serif;
+}
+
+.com-gara{
+  font-family:"eb-garamond", serif;
+}
+
+.com-helv {
+  font-family: Helvetica, sans-serif;
+}
+
+.com-univ{
+  font-family:"univers", sans-serif;
+}
+
+.horizon-ricerca-dx{
+  position: absolute;
+  right: 0px;
+}
+
+
