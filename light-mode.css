@@ -104,10 +104,11 @@ input[type="checkbox"] {
   width: 80px;
   height: 80px;
   cursor: pointer;
-  border: 2px solid #3b343f;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(59, 52, 63, 0.4);
 }
 
 .barre {
@@ -117,47 +118,67 @@ input[type="checkbox"] {
 }
 
 .barrainmezzo {
-  width: 70px;
-  height: 6px;
+  width: 50px;
+  height: 4px;
   background: #3b343f;
-  border-radius: 50%;
+  border-radius: 3px;
   position: absolute;
   transition: 0.3s ease;
+  z-index: 300; /*devono esser sopra a tutto perchè quando si espande il menu le barre devono restare visibili*/
 }
 
 .barrasopra {
-  width: 70px;
-  height: 6px;
+  width: 50px;
+  height: 4px;
   background: #3b343f;
-  border-radius: 50%;
-  position: absolute;
+  border-radius: 3px;
+  position: absolute; /*perchè questa è absolute e l'altra è relative? non lo so neanche io,
+    la cosa più sensata mi sembrava mettere entrambe relative ma se facevo così le barre si spostavano in orizzontale*/
   transition: 0.3s ease;
-  top: 40px;
+  top: -10px;
+  z-index: 300; /*devono esser sopra a tutto perchè quando si espande il menu le barre devono restare visibili*/
 }
 
 .barrasotto {
-  width: 70px;
-  height: 6px;
+  width: 50px;
+  height: 4px;
   background: #3b343f;
-  border-radius: 50%;
-  position: absolute;
+  border-radius: 3px;
+  position: relative;
   transition: 0.3s ease;
-  bottom: 40px;
+  top: 10px;
+  z-index: 300; /*devono esser sopra a tutto perchè quando si espande il menu le barre devono restare visibili*/
 }
 
-input[type="checkbox"]:checked ~ .barrasopra {
+input[type="checkbox"]:checked ~ .barrasopra {  /*BRUTTA DA RIFARE TUTTA*/
+  /*capire sperchè le righe si spostano anche a destra*/
   transform: rotate(-45deg);
-  width: 70px;
   transform-origin: right;
   top: -25px;
 }
 
 input[type="checkbox"]:checked ~ .barrasotto {
   transform: rotate(45deg);
-  width: 70px;
+  width: 50px;
   transform-origin: right;
   top: 25px;
 }
+
+.sfondomenu {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateY(-38px); /*ho dovuto metterlo perchè per qualche motivo me lo spostava un po' sotto*/
+  z-index: 250;
+  background-color: #fcf8f2;
+  transition: all 0.5s ease-in-out;
+}
+
+.input[type="checkbox"]:checked ~ .sfondomenu {
+transform: scale(80);
+} /*guardare perchè non funzia*/
+  
 
 /*fine stile della navbar*/
 
@@ -210,10 +231,12 @@ input[type="checkbox"]:checked ~ .barrasotto {
   margin-left: 40px;
   margin-top: 30px;
   margin-bottom: 30px;
+  transition: all 0.2s ease-out;
 }
 
 .sidenav a:hover {
   letter-spacing: 2pt;
+  font-size: 33pt;
 }
 
 .sidenav a::first-line {
