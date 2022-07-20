@@ -16,7 +16,7 @@ function cambiastile() {
 
 btn.onclick = cambiastile;
 
-// MENU A TENDINA
+// MENU A TENDINA anche questo nono funz
 
 const menuBtn = document.querySelector(".menubtn");
 let menuOpen = false;
