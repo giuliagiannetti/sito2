@@ -106,3 +106,46 @@ document.querySelectorAll('a[href="#"]').forEach(anchor => {
     });
   });
 });
+
+// INIZIO SLIDESHOW
+
+let slideindex=1;//scelgo l'immagine che veglio sia visibile
+showSlides(slideIndex) //Chiamo la funzione showSlides e le do un indice di 1 (perché slideIndex=1)
+// showSlides usa getElementsByClassName per recuperare l'oggetto attraverso il nome della classe
+// getElementsByClassName è diverso da getElementByClassName: la "s" di elements ci dice che stiamo prendendo un oggetto da un vettore
+// in questo caso il nostro vettore contiene tutti gli elementi di classe mySlides cioè i div con le scatole di testo
+
+// Next/previous controls
+function plusSlides(n) {
+  slideIndex += n;// prende il valore dell'indice della slide in cui mi trovo e aggiunge o toglie un numero per andare alla slide successiva
+  showSlides(slideIndex);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {  
+  //nell'HTML ogni dot ha la funzione "onclick" di "currentSlide("numero assocaito al dot")"
+  //quindi cliccando sul pallino viene assegnato alla variabile "n" il nmero della slide a cui è associato il pallino che schiacci
+  //a quel punto si attiva la slide che ha quell'indice
+  slideIndex = n;
+  showSlides(n);
+}
+
+function showSlides (n){//fammi vedere la slide numero n
+
+  let i;
+  let slides = document.getElementsByClassName("mySlides")
+  let dots = document.getElementsByClassName("dot")
+  if (n>slides.lenght) {slideIndex=1}//se n, cioè il numero della slide che sto chiedendo, è più grande del numero di slide totali (cioè slides.length) allora prendimi la prima slide
+
+  if (n<1) {slideIndex=slides.length}// operazione inversa
+  for (i=0;i<slides.length; i++) {
+    slides[i].style.display="none";//
+  }
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");// active è il colore modificato quando sono in hover, mentre ""  sta ad indicare "nessuno stile"
+  }
+
+  slides[slideIndex -1].style.display="block"
+  dots[slideIndex -1].className += "active"
+}
