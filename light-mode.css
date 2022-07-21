@@ -78,6 +78,7 @@ body {
 #compare, #infont{
 text-align: center;
 color: #3b343f;
+padding:50px, 50px, 50px, 10px;
 }
 
 #infont:hover{
@@ -88,6 +89,12 @@ color: rgb(255, 52, 79);
   color: rgb(255, 52, 79);
   }
 
+  .scrolla{
+    z-index: 0;
+    height: 100%;
+    position:fixed;
+    top: 50px;
+  }
 .sidenav-ricerca {
   width: 33.33%;
   position: fixed;
