@@ -92,92 +92,7 @@ header {
   /*non so perchè ma lo mette a sinistra*/
 }
 
-input[type="checkbox"] {
-  -webkit-appearance: none;
-  visibility: hidden;
-  display: none;
-  width: 80px;
-  height: 80px;
-}
 
-.menubtn {
-  width: 80px;
-  height: 80px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  box-shadow: 0px 0px 10px rgba(59, 52, 63, 0.4);
-}
-
-.barre {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.barrainmezzo {
-  width: 50px;
-  height: 4px;
-  background: #3b343f;
-  border-radius: 3px;
-  position: absolute;
-  transition: 0.3s ease;
-  z-index: 300; /*devono esser sopra a tutto perchè quando si espande il menu le barre devono restare visibili*/
-}
-
-.barrasopra {
-  width: 50px;
-  height: 4px;
-  background: #3b343f;
-  border-radius: 3px;
-  position: absolute; /*perchè questa è absolute e l'altra è relative? non lo so neanche io,
-    la cosa più sensata mi sembrava mettere entrambe relative ma se facevo così le barre si spostavano in orizzontale*/
-  transition: 0.3s ease;
-  top: -10px;
-  z-index: 300; /*devono esser sopra a tutto perchè quando si espande il menu le barre devono restare visibili*/
-}
-
-.barrasotto {
-  width: 50px;
-  height: 4px;
-  background: #3b343f;
-  border-radius: 3px;
-  position: relative;
-  transition: 0.3s ease;
-  top: 10px;
-  z-index: 300; /*devono esser sopra a tutto perchè quando si espande il menu le barre devono restare visibili*/
-}
-
-input[type="checkbox"]:checked ~ .barrasopra {  /*BRUTTA DA RIFARE TUTTA*/
-  /*capire sperchè le righe si spostano anche a destra*/
-  transform: rotate(-45deg);
-  transform-origin: right;
-  top: -25px;
-}
-
-input[type="checkbox"]:checked ~ .barrasotto {
-  transform: rotate(45deg);
-  width: 50px;
-  transform-origin: right;
-  top: 25px;
-}
-
-.sfondomenu {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  position: absolute;
-  transform: translateY(-38px); /*ho dovuto metterlo perchè per qualche motivo me lo spostava un po' sotto*/
-  z-index: 250;
-  background-color: #fcf8f2;
-  transition: all 0.5s ease-in-out;
-}
-
-.input[type="checkbox"]:checked ~ .sfondomenu {
-transform: scale(80);
-} /*guardare perchè non funzia*/
   
 
 /*fine stile della navbar*/
@@ -391,22 +306,29 @@ transform: scale(80);
   height: 100%;
 }
 
-/* Clear floats after the columns 
+.row{
+  position: fixed;
+  top: 180px;
+}
+
+/*Clear floats after the columns*/ 
 .row:after {
   content: "";
   display: table;
   clear: both;
-}*/
+}
   
 .compare-input{
     border: 3pt solid #3b343f;
     /*l'altezza della navbar (104px) più altri 100px*/
     overflow: stroll;
-    font-size: 20pt;
+    font-size: 200pt;
     width: 100%;
+    padding: 5%;
     border-radius: 58.8px;
     padding-left: 1%;
     background-color: #fcf8f2;
+    overflow: hidden;
   }
 
   .compare-input:focus {
@@ -414,24 +336,7 @@ transform: scale(80);
     outline: none;
   }
 
-  /*animazione*/
-  .fade{
-    animation-name: fade;
-    animation-duration: 1s;
-    transform: ease;
-  }
-  @keyframes fade{
-    from{
-      opacity: 0.4
-    }
-    to{
-      opacity: 1
-    }
-  }
-
-  * {
-    box-sizing: border-box
-}
+ 
 
 /* Slideshow container */
 .slideshow-container {
@@ -442,7 +347,11 @@ transform: scale(80);
 
 /* Hide the images by default */
 .mySlides {
-    display: none;
+  display: none;/*se no compaiono tutti incolonnati*/
+}
+
+.pallini {
+text-align: center;
 }
 
 /* Next & previous buttons */
@@ -450,22 +359,20 @@ transform: scale(80);
 .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 420px;
     width: auto;
-    margin-top: -22px;
     padding: 16px;
     color: #3b343f;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20pt;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius: 50%;
     user-select: none;
 }
 
 /* Position the buttons to the right and left */
 .next {
   right: 1%;
-  border-radius: 3px 0 0 3px;
 }
 
 .prev{
@@ -479,13 +386,21 @@ transform: scale(80);
     color: #fcf8f2;
 }
 
+ /*Caption sotto alle font-box*/
+ .text{
+  font-family: "janson";
+  text-align: center;
+  font-size: 20pt;
+  padding-top: 4pt;
+}
+
 /* The dots/bullets/indicators */
-.dot {
+.dot, .dotr {
   cursor: pointer;
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #eadcc7;
+  background-color: #3b343f;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -493,7 +408,22 @@ transform: scale(80);
 
 .active,
 .dot:hover {
-  background-color: #645d68;
+  background-color: #eadcc7;
+}
+
+ /*animazione*/
+ .fade{
+  animation-name: fade;
+  animation-duration: 1s;
+  /*transform: ease;*/
+}
+@keyframes fade{
+  from{
+    opacity: .4
+  }
+  to{
+    opacity: 1
+  }
 }
 
   /*FINE COMPARE SLIDESHOW*/
