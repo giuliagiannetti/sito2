@@ -1,10 +1,9 @@
-/*con questo "carico" i font dalla cartella font che è nella cartella del progetto. Sono in cima così si caricano da subito e poi posso usarli dopo nel css*/
+/*con questo "carico" i font da subito e poi posso usarli dopo nel css*/
 @font-face {
   font-family: "eckma";
   src: url(fonts/eckma.ttf);
 }
 
-/*idem con patate*/
 @font-face {
   font-family: "janson";
   src: url(fonts/Janson/Janson/JansonTextLTStd-Roman\ from\ download-free-fonts.com.otf);
@@ -15,18 +14,29 @@
   src: url(fonts/univers/univers/UniversRegular.ttf);
 }
 
-/*questo non so cosa sia [ouch], lo sto dicendo solo perchè il tutorial mi dice di farlo*/
+/*$*/
 * {
-  /*l'asterisco vuol dire che si riferisce a TUTTO l'HTML */
   box-sizing: border-box;
-  /*$*/
   margin: 0;
-  /*per far sì che gli elementi non siano di default in mezzo al website*/
+  background: #3b343f;
+
 }
 
 /*definisco in generale il colore dello sfondo di tutti gli elementi del body e il colore di tutti i testi*/
 body {
   background: #3b343f;
+}
+
+.sidenav-ricerca {
+  width: 33.33%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: #3b343f;
+  overflow: hidden;
+  top: 164px;
+  padding-left: 5%;
 }
 
 p {
@@ -37,30 +47,24 @@ a {
   display: block;
   /*trasforma l'elemento in block perchè se no le parole si posizionano una accanto all'altra*/
   text-decoration: none;
-  /*perché di default i collegamenti hanno la formattazione blu con sottolineatura e diventano viola quando li apri*/
   color: #fcf8f2;
 }
 
 /*inizio stile della navbar*/
 header {
-  /*è tipo un contenitore: defineno lo stile dell'header io definisco lo stile del contenitore (rettangolo) e tutto quello che c'è dentro*/
   position: fixed;
-  /*Sta li fermo e non scorre*/
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 200;
   display: flex;
-  /*$tutoral su miro*/
   background-color: #3b343f;
-  justify-content: end;
-  /*ti allinea tutto a destra. Prima abbiamo allineato tutto a destra, poi ho specificato che la scritta "FONTCOW" va a sinistra*/
-  align-items: center;
-  /*Tutti gli elementi sono al centro dell'Header SEMPRE*/
+  justify-content: end; /*ti allinea tutto a destra*/
+  align-items: center; /*allinea tutti gli elementi all'interno al centro*/
   padding: 10px 5%;
-  /*scritto così significa che c'è uno spazio di 10px tra la scritta/mucca/menu e il bordo dell'header dall'alto e dal basso, mentre dell'5% (dello schermo) dai lati*/
-  border-bottom: 3pt solid #fcf8f2;
-  /*!!! se cambi lo spessore del bordo poi devi cambiare anche la traslazione del grid container*/
+  /*scritto così significa che c'è un "cuscinetto" di 30px dall'alto e dal basso, mentre dell'8% (dello schermo?) dai lati*/
+  /*border-bottom: 3pt solid #3b343f; !!! se cambi lo spessore del bordo poi devi cambiare anche la traslazione del grid container*/
+  box-shadow: 0px 5px 5px rgba(59, 52, 63, 0.4);
 }
 
 .pulsante-cambiodistile {
@@ -73,7 +77,7 @@ header {
 }
 
 .pulsante-cambiodistile:hover {
-  background-color: #3b343f;
+  cursor: pointer;
 }
 
 .logo {
@@ -83,77 +87,133 @@ header {
 
 .nomesito {
   font-family: "eckma", sans-serif;
-  /*Sans-serif è per mettere una font sostitutiva se non ti trova Ekma*/
   font-size: 40pt;
   margin-right: auto;
-  /*$non so perchè ma lo mette a sinistra*/
+  color:#fcf8f2;
 }
+  
 
-.menu {
-  width: 80px;
-  height: 80px;
-}
-
-/*fine stile della navbar (quella in alto)*/
+/*fine stile della navbar*/
 
 /*inizio modifica della sidenav*/
+.pulisci-sidenav {
+  display: none;
+}
+
+#mySearch {
+  border: 3pt solid #eadcc7;
+  margin: 0px 0 40px 0px;
+  /*l'altezza della navbar (104px) più altri 100px*/
+  height: 117.6px;
+  overflow: stroll;
+  font-size: 20pt;
+  width: 100%;
+  font-family: "janson";
+  border-radius: 58.8px;
+  padding-left: 50px;
+  background-color: #3b343f;
+}
+
+#mySearch:focus {
+  background-color: #eadcc7;
+  outline: none;
+}
+
+
+#myMenu {
+  list-style: none;
+  width: 100%;
+  padding-left: 0px; /*bisogna specificare padding 0 se no ti lascia un padding a sinistra, credo te lo lasci perché #myMenu è associato ad una lista*/
+}
+
 .sidenav {
-  /*è lo spazio a sinistra, non il rettangolo fisso*/
   height: 100%;
   width: 33.33%;
   position: fixed;
-  z-index: 2;
+  z-index: 100;
   top: 0;
   left: 0;
   background-color: #3b343f;
-  overflow-x: hidden;
-  /*$*/
+  overflow: scroll;
   padding-top: 20px;
   padding-left: 5%;
 }
 
 .sidenav a {
-  /*Sono le scritte. Prendimi tutti gli "a" che sono nela sidenav*/
   font-family: "janson";
   font-size: 30pt;
   text-align: left;
   margin-left: 40px;
   margin-top: 30px;
+  margin-bottom: 30px;
+  transition: all 0.2s ease-out;
 }
 
 .sidenav a:hover {
-  color: yellow;
+  letter-spacing: 2pt;
+  font-size: 33pt;
+}
+
+.sidenav a::first-line {
+  margin-top: 100px;
 }
 
 .sidenav-cornice {
-  border: 3pt solid #fcf8f2;
+  border: 3pt solid #eadcc7;
   margin: 144px 20px 40px 0px;
   padding-top: 100px;
   /*l'altezza della navbar (104px) più altri 100px*/
-  height: 500px;
+  height: 1000px;
   overflow: scroll;
+  z-index: 100;
+}
+
+.contenitore-sidenav-nomi {
+  border: 3pt solid #eadcc7;
+  margin: 0px 0 40px 0px;
+  /*l'altezza della navbar (104px) più altri 100px*/
+  height: 340px;
+  overflow: scroll;
+  width: 100%;
+  font-family: "janson";
+  border-radius: 58.8px;
+  border: 3pt solid #eadcc7;
+  font-family: "janson";
+  border-radius: 58.8px;
+  overflow-x: hidden;
+}
+
+.sidenav-nomi {
+  font-family: "janson", serif;
+  font-size: 30pt;
+  text-align: left;
+  margin-top: 30px;
+  margin-right: 30px;
+}
+
+li {
+margin-left: 10px;
+margin-right: 10px;
 }
 
 /*inizio scrollbar*/
 ::-webkit-scrollbar {
   width: 1.25em;
-  /*larghezza totale della scrollbar. Di default la larghezza è zero, per questo bisogna specificare la larghezza totale*/
 }
 
 ::-webkit-scrollbar-track {
-  /*binari della scrollbar*/
   background-color: #3b343f;
   margin-block: 0.5rem;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #fcf8f2;
-  border: 0.25em solid #3b343f;
+  background-color: #3b343f;
+  border: 0.25em solid #fcf8f2;
   border-radius: 100vw;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: white;
+  background-color: #000000;
 }
 
 /*fine scrollbar*/
@@ -164,24 +224,27 @@ header {
   /* traslo a destra della stessa larghezza della sidebar, così appare accanto */
   margin-top: 130px;
   padding: 0px 5% 0px 40pt;
-  z-index: 1;
+  z-index: 50;
   background-color: transparent;
 }
 
 .stofont-titoli {
   font-size: 89pt;
+  color: #eadcc7;
 }
 
 .stofont-testi {
   font-size: 20pt;
+  margin-top: 24pt;
+  color: #fcf8f2;
 }
 
-.bodonimargin,
-.frankmargin,
-.helvmargin,
-.garamargin,
-.univmargin {
-  margin-bottom: 60pt;
+#bodonimargin,
+#frankmargin,
+#helvmargin,
+#garamargin,
+#univmargin {
+  padding-top: 135px;
 }
 
 #univers {
@@ -193,47 +256,24 @@ header {
 }
 
 #garamond {
-  font-family: eb-garamond, serif;
+  font-family: "eb-garamond", serif;
   font-weight: 400;
-  /*non ti allarmare se solo alcuni hanno il font weight. Sono info prese di peso dai pacchetti font adobe*/
   font-style: normal;
 }
 
 #bodoni {
-  font-family: bodoni-urw, serif;
+  font-family: "bodoni-urw", serif;
   font-weight: 400;
   font-style: normal;
 }
 
 #frankgothic {
-  font-family: franklin-gothic-urw, sans-serif;
+  font-family: "franklin-gothic-urw", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.cerchio {
-  width: 350px;
-  height: 350px;
-  border: 3px solid #fcf8f2;
-  border-radius: 50%;
-  /*è per trasformare un blocco in un cerchio. La percentuale è di quanto devono essere arrotondati i bordi */
-  background-color: transparent;
-  float: right;
-  outline-width: 99px;
-  outline-color: rebeccapurple;
-  z-index: 0;
-}
-
-.letterehuge {
-  /*Big B of Bodoni*/
-  font-size: 400pt;
-  position: absolute;
-  right: 70px;
-  top: 160px;
-  z-index: -1;
-}
-
-/*per un responsive che non ci serve? preso dal pezzo di codice per fare la sidenav*/
+/*per un responsive che non ci serve?*/
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;
@@ -243,3 +283,164 @@ header {
     font-size: 18px;
   }
 }
+
+/*INIZIO PAGINA COMPARE*/
+
+/*COMPARE CON SLIDESHOW*/
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 100%;
+}
+
+.row{
+  position: fixed;
+  top: 180px;
+}
+
+/*Clear floats after the columns*/ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  
+.compare-input{
+    border: 3pt solid #3b343f;
+    /*l'altezza della navbar (104px) più altri 100px*/
+    overflow: stroll;
+    font-size: 200pt;
+    width: 100%;
+    padding: 5%;
+    border-radius: 58.8px;
+    padding-left: 1%;
+    background-color: #fcf8f2;
+    overflow: hidden;
+  }
+
+  .compare-input:focus {
+    background-color: #fcf8f2;
+    outline: none;
+  }
+
+ 
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;/*se no compaiono tutti incolonnati*/
+}
+
+.pallini {
+text-align: center;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 420px;
+    width: auto;
+    padding: 16px;
+    color: #3b343f;
+    font-weight: bold;
+    font-size: 20pt;
+    transition: 0.6s ease;
+    border-radius: 50%;
+    user-select: none;
+}
+
+/* Position the buttons to the right and left */
+.next {
+  right: 1%;
+}
+
+.prev{
+  left: 1%;  
+  }
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color:#3b343f;
+    color: #fcf8f2;
+}
+
+ /*Caption sotto alle font-box*/
+ .text{
+  font-family: "janson";
+  text-align: center;
+  font-size: 20pt;
+  padding-top: 4pt;
+}
+
+/* The dots/bullets/indicators */
+.dot, .dotr {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #3b343f;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #eadcc7;
+}
+
+ /*animazione*/
+ .fade{
+  animation-name: fade;
+  animation-duration: 1s;
+  /*transform: ease;*/
+}
+@keyframes fade{
+  from{
+    opacity: .4
+  }
+  to{
+    opacity: 1
+  }
+}
+
+.com-bodoni{ /* queste clasi che iniziano per "com" servono per associare alle lettere nelle strisce la loro font */
+  font-family:"bodoni-urw", serif;
+}
+
+.com-frank{
+  font-family:"franklin-gothic-urw", sans-serif;
+}
+
+.com-gara{
+  font-family:"eb-garamond", serif;
+}
+
+.com-helv {
+  font-family: Helvetica, sans-serif;
+}
+
+.com-univ{
+  font-family:"univers", sans-serif;
+}
+
+.horizon-ricerca-dx{
+  position: absolute;
+  right: 0px;
+}
+
+  /*FINE COMPARE SLIDESHOW*/
+
+
